@@ -62,7 +62,8 @@ program intrinsics
   yy  = yy**yy   ! pow
   zzz = zzz**zzz ! pow
   
-  !write(*,*) x
-  !write(*,*) y
+  write(*,*) x
+  write(*,*) yy
+  write(*,*) zzz
   
 end program intrinsics

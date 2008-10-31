@@ -8,7 +8,7 @@ subroutine compute(x)
   x = x / 2.054321
 end subroutine
 
-program simple9
+program controlflow_loop4
   IMPLICIT NONE
 
   integer :: i, lb, ub, step, iter

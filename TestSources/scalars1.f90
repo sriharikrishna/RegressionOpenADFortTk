@@ -14,3 +14,13 @@ subroutine head(x, y)
   y=t1+t2
 
 end subroutine
+
+
+program scalars1
+
+   double precision a,b
+   a=1.3
+   b=2.5
+   call head(a,b)
+   print *,b
+end program
