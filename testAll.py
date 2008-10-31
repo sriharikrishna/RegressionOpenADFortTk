@@ -465,41 +465,41 @@ def main():
 	while (j < rangeEnd):
 	    try:
 		runTest(examples[j],j+1,len(examples))
-	    except ConfigError, errtxt:
-		print "ERROR (environment configuration) in test %i of %i (%s): %s" % (j+1,len(examples),examples[j],errtxt)
+	    except ConfigError, errMsg:
+		print "ERROR (environment configuration) in test %i of %i (%s): %s" % (j+1,len(examples),examples[j],errMsg)
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
 		else:
 		    return -1
-	    except MakeError, errtxt:
-		print "ERROR in test %i of %i (%s) while executing \"%s\"." % (j+1,len(examples),examples[j],errtxt)
+	    except MakeError, errMsg:
+		print "ERROR in test %i of %i (%s) while executing \"%s\"." % (j+1,len(examples),examples[j],errMsg)
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
 		else:
 		    return -1
-	    except ComparisonError, e:
-		print "ERROR :" + e
+	    except ComparisonError, errMsg:
+		print "ERROR in test %i of %i (%s): %s." % (j+1,len(examples),examples[j],errMsg)
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
-	    except RuntimeError, errtxt:
-		print "ERROR in test %i of %i (%s): %s." % (j+1,len(examples),examples[j],errtxt)
+	    except RuntimeError, errMsg:
+		print "ERROR in test %i of %i (%s): %s." % (j+1,len(examples),examples[j],errMsg)
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
 		else:
 			return -1
 	    j = j + 1
-    except ConfigError, errtxt:
-	print "ERROR (environment configuration):",errtxt
+    except ConfigError, errMsg:
+	print "ERROR (environment configuration):",errMsg
 	return -1
-    except CommandLineError, errtxt:
-	print "ERROR (command line arguments):",errtxt
+    except CommandLineError, errMsg:
+	print "ERROR (command line arguments):",errMsg
 	return -1
-    except RuntimeError, errtxt:
-	print 'caught exception: ',errtxt
+    except RuntimeError, errMsg:
+	print 'caught exception: ',errMsg
 	return -1
     print "ALL OK (or acknowledged)"
     return 0
