@@ -13,6 +13,8 @@ globalOfferAcceptAsDefault=False
 globalAcceptAll=False
 globalVerbose=False
 globalUnstructured=False
+globalOkCount=0
+globalKnownFailCount=0
 
 class MultiColumnOutput:
 
@@ -314,6 +316,10 @@ def runTest(exName,exNum,totalNum):
                 sys.stdout.write("\n")
                 sys.stdout.flush()
                 return 0
+        global globalKnownFailCount
+        globalKnownFailCount+=1
+        global globalNewFailCount
+        globalNewFailCount-=1
     else:
         printSep("*","** testing %i of %i (%s)" % (exNum,totalNum,exName),sepLength)
     cmd="ln -sf "+os.path.join("TestSources",exName) + " " + exName
@@ -397,6 +403,8 @@ def runTest(exName,exNum,totalNum):
     if (filecmp.cmp(basename+".out", basename+".x2w.w2f.out")!=1):
         raise ComparisonError, "diff "+basename+".out "+basename+".x2w.w2f.out"
     printSep("*","",sepLength)
+    global globalOkCount
+    globalOkCount+=1
 
 
 def main():
@@ -436,6 +444,7 @@ def main():
                    help="translate as unstructured control flow (default off)",
                    action='store_true',default=False)
     (options, args) = opt.parse_args()
+    newFailCount=0
     try:
         if os.environ.has_key('BATCHMODE') or options.batchMode :
             global globalBatchMode
@@ -478,6 +487,7 @@ def main():
 		runTest(examples[j],j+1,len(examples))
 	    except ConfigError, errMsg:
 		print "ERROR (environment configuration) in test %i of %i (%s): %s" % (j+1,len(examples),examples[j],errMsg)
+	        newFailCount+=1
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
@@ -485,6 +495,7 @@ def main():
 		    return -1
 	    except MakeError, errMsg:
 		print "ERROR in test %i of %i (%s) while executing \"%s\"." % (j+1,len(examples),examples[j],errMsg)
+	        newFailCount+=1
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
@@ -492,11 +503,13 @@ def main():
 		    return -1
 	    except ComparisonError, errMsg:
 		print "ERROR in test %i of %i (%s): %s." % (j+1,len(examples),examples[j],errMsg)
+	        newFailCount+=1
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
 	    except RuntimeError, errMsg:
 		print "ERROR in test %i of %i (%s): %s." % (j+1,len(examples),examples[j],errMsg)
+	        newFailCount+=1
 		if not (globalBatchMode):
 		    if (raw_input("Do you want to continue? (y)/n: ") == "n"):
 			return -1
@@ -512,7 +525,7 @@ def main():
     except RuntimeError, errMsg:
 	print 'caught exception: ',errMsg
 	return -1
-    print "ALL OK (or acknowledged)"
+    print "total: "+str(rangeEnd-rangeStart+1)+", ran  OK:"+str(globalOkCount)+", known errors:"+str(globalKnownFailCount)+", new errors:"+str(newFailCount)
     return 0
 
 if __name__ == "__main__":
