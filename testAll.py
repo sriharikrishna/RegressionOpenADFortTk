@@ -357,7 +357,7 @@ def runTest(exName,exNum,totalNum):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
     # fortran -> whirl -> xaif -> whirl
-    if (basename[0:3]=="US_") :
+    if (basename[0:3]=="UnStruct_") :
         print "   Unstructred control flow!"
         cmd=xaif2whirl + " " + basename+".B  " + basename+".xaif"
     else:    
