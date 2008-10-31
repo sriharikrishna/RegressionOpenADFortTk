@@ -1,0 +1,7 @@
+syntax: glob
+*.o
+*.B
+*.mod
+*~
+*.orig
+*.MOD
