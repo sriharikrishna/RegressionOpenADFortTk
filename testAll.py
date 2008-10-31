@@ -105,9 +105,9 @@ class ConfigError(Exception):
     """Exception thrown when there is a problem with the environment configuration"""
 
 def fileCompare(fcfileName,fcmode,ignoreString):
-    referenceFile = "Reference/"+fcmode + fcfileName
+    referenceFile = os.path.join("Reference",fcmode + fcfileName)
     if not (os.path.exists(referenceFile)):
-	sys.stdout.write(referenceFile +" not available")
+	sys.stdout.write("   "+referenceFile +" not available")
 	if not (globalBatchMode):
             answer=""
             if globalAcceptAll:
@@ -122,7 +122,7 @@ def fileCompare(fcfileName,fcmode,ignoreString):
                     if (answer != "y") :
                         answer="n"
             if (answer == "n"):
-		sys.stdout.write("cannot verify %s\n" % fcfileName)
+		sys.stdout.write("   cannot verify %s\n" % fcfileName)
                 sys.stdout.flush()
 		return 0
 	    else:
@@ -138,22 +138,22 @@ def fileCompare(fcfileName,fcmode,ignoreString):
     if (hasDiff == 512):
 	raise RuntimeError, "command "+cmd+" not successful"
     elif (hasDiff == 256):
-	sys.stdout.write("Transformation -- diff "+fcfileName+" "+referenceFile+"\n")
+	sys.stdout.write("   Transformation -- diff "+fcfileName+" "+referenceFile+"\n")
 	if not (globalBatchMode):
             answer=""
             if globalAcceptAll:
                 answer="y"
             else:    
                 if (globalOfferAcceptAsDefault) :
-                    answer = raw_input("accept/copy new %s to %s? (y)/n: " % (fcfileName,referenceFile))
+                    answer = raw_input("   accept/copy new %s to %s? (y)/n: " % (fcfileName,referenceFile))
                     if (answer != "n"):
                         answer="y"
                 else:
-                    answer = raw_input("accept/copy new %s to %s? y/(n): " % (fcfileName,referenceFile))
+                    answer = raw_input("   accept/copy new %s to %s? y/(n): " % (fcfileName,referenceFile))
                     if (answer != "y"):
                         answer="n"
             if (answer == "n"):
-		sys.stdout.write("skipping change\n")
+		sys.stdout.write("   skipping change\n")
 	    else:
 		shutil.copy(fcfileName,referenceFile)
     sys.stdout.flush()
