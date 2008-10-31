@@ -13,3 +13,11 @@ else
   b=e
 endif
 end
+
+program controlflow_if2
+real a,b
+a=2.0D0
+b=3.2D0
+call ex(a,b)
+print *,a,b
+end program
