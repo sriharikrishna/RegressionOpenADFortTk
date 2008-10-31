@@ -12,6 +12,7 @@ globalIgnoreFailingCases=False
 globalOfferAcceptAsDefault=False
 globalAcceptAll=False
 globalVerbose=False
+globalUnstructured=False
 
 class MultiColumnOutput:
 
@@ -357,7 +358,7 @@ def runTest(exName,exNum,totalNum):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
     # fortran -> whirl -> xaif -> whirl
-    if (basename[0:3]=="UnStruct_") :
+    if (globalUnstructured or basename[0:3]=="UnStruct_") :
         print "   Unstructred control flow!"
         cmd=xaif2whirl + " " + basename+".B  " + basename+".xaif"
     else:    
@@ -431,6 +432,9 @@ def main():
     opt.add_option('-O','--optimize',dest='optimize',
                    help="turn compiler optimization on (default off)",
                    action='store_true',default=False)
+    opt.add_option('-u','--unstructure',dest='unstructured',
+                   help="translate as unstructured control flow (default off)",
+                   action='store_true',default=False)
     (options, args) = opt.parse_args()
     try:
         if os.environ.has_key('BATCHMODE') or options.batchMode :
@@ -448,6 +452,9 @@ def main():
         if options.verbose :
             global globalVerbose
             globalVerbose=True
+        if options.unstructured :
+            global globalUnstructured
+            globalUnstructured=True
         if options.compiler :
             os.environ['F90C']=options.compiler
         if options.optimize :
