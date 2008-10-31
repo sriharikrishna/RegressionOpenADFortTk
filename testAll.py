@@ -357,7 +357,7 @@ def runTest(exName,exNum,totalNum):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
     # fortran -> whirl -> xaif -> whirl
-    cmd=xaif2whirl + " " + basename+".B  " + basename+".xaif" 
+    cmd=xaif2whirl + " --structured " + basename+".B  " + basename+".xaif" 
     if globalVerbose :
         print cmd
     if (os.system(cmd)):
