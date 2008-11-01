@@ -280,6 +280,7 @@ def runTest(exName,exNum,totalNum):
     xaif2whirl=os.path.join(os.environ['OPENADFORTTKROOT'],'bin','xaif2whirl')
     sys.stdout.flush()
     basename,ext=os.path.splitext(exName)
+    failCountAdjusted=False
     haveRef=os.path.exists(os.path.join('Reference',basename+'.x2w.w2f.f'))
     if not haveRef :
         if globalIgnoreFailingCases : 
@@ -321,6 +322,7 @@ def runTest(exName,exNum,totalNum):
         globalKnownFailCount+=1
         global globalNewFailCount
         globalNewFailCount-=1
+        failCountAdjusted=True
     else:
         printSep("*","** testing %i of %i (%s)" % (exNum,totalNum,exName),sepLength)
     cmd="ln -sf "+os.path.join("TestSources",exName) + " " + exName
@@ -406,6 +408,10 @@ def runTest(exName,exNum,totalNum):
     printSep("*","",sepLength)
     global globalOkCount
     globalOkCount+=1
+    if failCountAdjusted:
+        globalKnownFailCount-=1
+        globalNewFailCount+=1
+        failCountAdjusted=True
 
 
 def main():
