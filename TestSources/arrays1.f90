@@ -18,6 +18,6 @@ program arrays
   x(1) = x(1) * x(4) + 3.1415 - y
   ix(4) = ix(1) / ix(2) + ii
 
-  print *,'x(1) = ', x(1), '''ix(4)'' = ',ix(4)
+  print *,'x(1) = ', x(1), 'ix(4) = ',ix(4)
 
 end program
