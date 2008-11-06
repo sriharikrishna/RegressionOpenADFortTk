@@ -271,7 +271,7 @@ def populateExamplesList(args):
 
 
 
-def runTest(exName,exNum,totalNum):
+def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     import filecmp
     mfef90=os.path.join(os.environ['OPEN64ROOT'],'crayf90','sgi','mfef90')
     whirl2f=os.path.join(os.environ['OPEN64ROOT'],'whirl2f','whirl2f')
@@ -334,7 +334,7 @@ def runTest(exName,exNum,totalNum):
     # we don't keep it in "Reference" since numerical output often
     # differs slightly between compilers...
     # fortran -> binary
-    cmd=os.environ['F90C']+" "+os.environ['F90FLAGS']+" -o " + basename + ".run " + exName
+    cmd=compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -o " + basename + ".run " + exName
     if globalVerbose :
         print cmd
     if (os.system(cmd)):
@@ -391,7 +391,7 @@ def runTest(exName,exNum,totalNum):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".x2w.w2f.f","","")
     # fortran -> whirl -> xaif -> whirl -> fortran -> binary
-    cmd=os.environ['F90C']+" "+os.environ['F90FLAGS']+" -o " + basename + ".x2w.w2f.run " + basename+".x2w.w2f.f"
+    cmd=compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -o " + basename + ".x2w.w2f.run " + basename+".x2w.w2f.f"
     if globalVerbose :
         print cmd
     if (os.system(cmd)):
@@ -442,7 +442,7 @@ def main():
                    action='store_true',default=False)
     opt.add_option('-c','--compiler',dest='compiler',
                    type='choice', choices=compilers,
-                   help="pick a compiler (defaults to ifort) from the following list: " +compilerOpts+" - the compiler should be in PATH",
+                   help="pick a compiler (defaults to ifort) from the following list: " +compilerOpts+" - the compiler should be in PATH; we use F90FLAGS when set in the environment",
                    default='ifort')
     opt.add_option('-O','--optimize',dest='optimize',
                    help="turn compiler optimization on (default off)",
@@ -472,19 +472,18 @@ def main():
         if options.unstructured :
             global globalUnstructured
             globalUnstructured=True
-        if options.compiler :
-            os.environ['F90C']=options.compiler
         if options.optimize :
             os.environ['OPTIMIZE']='true'
 	if not (os.environ.has_key('OPEN64ROOT')):
 	    raise ConfigError, "environment variable OPEN64ROOT not defined"
 	if not (os.environ.has_key('OPENADFORTTKROOT')):
 	    raise ConfigError, "environment variable OPENADFORTTKROOT not defined"
-	if not (os.environ.has_key('F90C')):
-            os.environ['F90C']='ifort'
 	if not (os.environ.has_key('F90FLAGS')):
             os.environ['F90FLAGS']=''
-        cmd=os.environ['F90C']+" "+os.environ['F90FLAGS']+" -c "+ "Extras/w2f__types.f90"
+        optimizeFlag='-O0 -g'
+        if options.optimize:
+	  optimizeFlag='-O3'
+        cmd=options.compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -c "+ "Extras/w2f__types.f90"
         if (os.system(cmd)):
             raise MakeError, "Error while executing \"" + cmd + "\""
 	(examples,rangeStart,rangeEnd) = populateExamplesList(args[0:])
@@ -492,7 +491,7 @@ def main():
 	j = rangeStart-1
 	while (j < rangeEnd):
 	    try:
-		runTest(examples[j],j+1,len(examples))
+		runTest(examples[j],j+1,len(examples), options.compiler, optimizeFlag)
 	    except ConfigError, errMsg:
 		print "ERROR (environment configuration) in test %i of %i (%s): %s" % (j+1,len(examples),examples[j],errMsg)
 	        globalNewFailCount+=1
