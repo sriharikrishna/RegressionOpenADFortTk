@@ -15,8 +15,10 @@ end function factorial
 
 
 program recfunc
-
+  implicit none
   integer :: n = 7
+  external factorial
+  integer factorial
 
   n = factorial(n)
   
