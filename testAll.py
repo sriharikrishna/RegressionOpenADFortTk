@@ -191,7 +191,7 @@ def populateExamplesList(args):
     allExamples = glob.glob(os.path.join("TestSources","*.f"))
     allExamples = allExamples + glob.glob(os.path.join("TestSources","*.f90"))
     allExamples = [ os.path.split(e)[1] for e in allExamples]
-    allExamples.sort() 
+    allExamples.sort(key=str.lower) # default sort is case sensitive, this one isn't
     rangeStart = 1
     rangeEnd = len(allExamples)
     examples = []
