@@ -13,7 +13,7 @@ program arrays
   x = 2.5
   y = 3.5
   ix = 5
-  i = 10
+  ii = 10
 
   x(1) = x(1) * x(4) + 3.1415 - y
   ix(4) = ix(1) / ix(2) + ii
