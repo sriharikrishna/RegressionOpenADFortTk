@@ -18,6 +18,6 @@ C
       JJJ = 3
       X = (X * X + 3.14149999618530273438D00 - Y)
       IX = JJJ + 1
-      WRITE(*, *) 'x(1) = ', X, '"ix(4)" = ', IX
+      WRITE(*, *) 'x(1) = ', X, 'ix(4) = ', IX
       
       END PROGRAM
