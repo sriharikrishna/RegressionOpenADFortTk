@@ -1,27 +1,4 @@
 
-      PROGRAM myprog
-      use w2f__types
-      IMPLICIT NONE
-C
-C     **** Local Variables and Functions ****
-C
-      CHARACTER(1) CHAR
-      REAL(w2f__4) NUM1
-      INTEGER(w2f__i4) NUM2
-C
-C     **** Statements ****
-C
-1     CONTINUE
-      GO TO 2
-2     CONTINUE
-      CHAR = 'S'
-      NUM1 = 5.0
-      NUM2 = 10
-      
-      GO TO 3
-3     CONTINUE
-      END PROGRAM
-
       SUBROUTINE test()
       use w2f__types
       IMPLICIT NONE
@@ -43,9 +20,24 @@ C
 C
 C     **** Statements ****
 C
-4     CONTINUE
-      GO TO 5
-5     CONTINUE
-      GO TO 6
-6     CONTINUE
       END SUBROUTINE
+
+      PROGRAM myprog
+      use w2f__types
+      IMPLICIT NONE
+C
+C     **** Local Variables and Functions ****
+C
+      CHARACTER(1) CHAR
+      REAL(w2f__4) NUM1
+      INTEGER(w2f__i4) NUM2
+      EXTERNAL test
+C
+C     **** Statements ****
+C
+      CHAR = 'S'
+      NUM1 = 5.0
+      NUM2 = 10
+      CALL test()
+      
+      END PROGRAM
