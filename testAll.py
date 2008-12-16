@@ -16,6 +16,7 @@ globalUnstructured=False
 globalOkCount=0
 globalKnownFailCount=0
 globalNewFailCount=0
+globalDiffCmd='diff'
 
 class MultiColumnOutput:
 
@@ -137,11 +138,16 @@ def fileCompare(fcfileName,fcmode,ignoreString):
 	    sys.stdout.write("\n")
             sys.stdout.flush()
             return 0
-    cmd="diff -I '"+ignoreString+"' "+fcfileName+" "+referenceFile        
-    hasDiff = os.system(cmd)
+    cmd="diff "
+    if (ignoreString != '') : 
+	cmd+="-I '"+ignoreString+"' "
+    cmd+=fcfileName+" "+referenceFile        
+    hasDiff = os.system(cmd+" > /dev/null")
     if (hasDiff == 512):
 	raise RuntimeError, "command "+cmd+" not successful"
-    elif (hasDiff == 256):
+    elif (hasDiff != 0):
+	if not (globalBatchMode):
+            os.system(globalDiffCmd+" "+fcfileName+" "+referenceFile)
 	sys.stdout.write("   Transformation -- diff "+fcfileName+" "+referenceFile+"\n")
 	if not (globalBatchMode):
             answer=""
@@ -358,7 +364,7 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
         print cmd
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
-    fileCompare(basename+".xaif","","")
+    fileCompare(basename+".xaif",""," XAIF file translated from WHIRL at ")
     # fortran -> whirl -> sxp
     cmd=whirl2sexp + " " + basename+".B > " + basename+".sxp" 
     if globalVerbose :
@@ -437,6 +443,8 @@ def main():
     opt.add_option('-b','--batchMode',dest='batchMode',
                    help="run in batchMode suppressing output",
                    action='store_true',default=False)
+    opt.add_option('-d','--diff',dest='diff',
+                   help="different diff command (e.g. kdiff3) to show differences in case the regular diff detects differences")
     opt.add_option('-v','--verbose',dest='verbose',
                    help="let the pipeline components produce some extra output",
                    action='store_true',default=False)
@@ -447,7 +455,7 @@ def main():
     opt.add_option('-O','--optimize',dest='optimize',
                    help="turn compiler optimization on (default off)",
                    action='store_true',default=False)
-    opt.add_option('-u','--unstructure',dest='unstructured',
+    opt.add_option('-u','--unstructured',dest='unstructured',
                    help="translate as unstructured control flow (default off)",
                    action='store_true',default=False)
     (options, args) = opt.parse_args()
@@ -466,6 +474,9 @@ def main():
         if options.acceptAll :
             global globalAcceptAll
             globalAcceptAll=True
+        if options.diff :
+            global globalDiffCmd
+            globalDiffCmd=options.diff 
         if options.verbose :
             global globalVerbose
             globalVerbose=True
