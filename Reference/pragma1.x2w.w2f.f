@@ -16,7 +16,7 @@ C
 C     **** Statements ****
 C
       X = (X * X + 3.14149999618530273438D00 - Y)
-      IX = JJJ + 1
+      IX = (JJJ + 1)
       A(1 : 10) = 3
       B(1 : 10) = 5
 C*$*UNROLL(2)

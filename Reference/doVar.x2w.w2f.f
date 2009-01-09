@@ -25,13 +25,13 @@ C
       U = 3
       S = 1
       DO I = L, U, S
-        J = I + J
+        J = (I + J)
       END DO
       L = 3
       U = 1
-      S = -1
+      S = (-1)
       DO I = L, U, S
-        K = I + K
+        K = (I + K)
       END DO
       IF((J .eq. 7) .AND.(K .eq. 7)) THEN
         WRITE(*, *) 'OK'

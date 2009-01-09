@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Oct 31 11:44:33 2008 -->
+<!-- XAIF file translated from WHIRL at Fri Jan  9 11:29:20 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -315,7 +315,7 @@
     </xaif:BasicBlock>
 
     <xaif:ForLoop vertex_id="3" reversal="anonymous" lineNumber="43">
-      <xaif:Initialization statement_id="30">
+      <xaif:Initialization statement_id="30" do_chain="5">
         <xaif:AssignmentLHS du_ud="2" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>
@@ -332,7 +332,7 @@
         <xaif:ExpressionEdge edge_id="1" source="2" target="1" position="1"/>
         <xaif:ExpressionEdge edge_id="2" source="3" target="1" position="2"/>
       </xaif:Condition>
-      <xaif:Update statement_id="35">
+      <xaif:Update statement_id="35" do_chain="5">
         <xaif:AssignmentLHS du_ud="4" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>
@@ -469,7 +469,7 @@
     <xaif:BasicBlock vertex_id="7" scope_id="2"/>
 
     <xaif:ForLoop vertex_id="8" reversal="anonymous" lineNumber="51">
-      <xaif:Initialization statement_id="91">
+      <xaif:Initialization statement_id="91" do_chain="10">
         <xaif:AssignmentLHS du_ud="2" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>
@@ -486,7 +486,7 @@
         <xaif:ExpressionEdge edge_id="1" source="2" target="1" position="1"/>
         <xaif:ExpressionEdge edge_id="2" source="3" target="1" position="2"/>
       </xaif:Condition>
-      <xaif:Update statement_id="96">
+      <xaif:Update statement_id="96" do_chain="10">
         <xaif:AssignmentLHS du_ud="6" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>

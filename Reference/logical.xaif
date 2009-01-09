@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Tue Dec 16 11:35:31 2008 -->
+<!-- XAIF file translated from WHIRL at Fri Jan  9 11:42:29 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -103,9 +103,30 @@
 
     <xaif:BasicBlock vertex_id="2" scope_id="2">
       <xaif:Marker statement_id="5" annotation="{WHIRL_Id#5} [passive: OPR_PRAGMA]"/>
-      <xaif:Marker statement_id="6" annotation="{WHIRL_Id#6} [passive: OPR_STID]"/>
-      <xaif:Marker statement_id="8" annotation="{WHIRL_Id#8} [passive: OPR_STID]"/>
-      <xaif:Marker statement_id="10" annotation="{WHIRL_Id#10} [passive: OPR_STID]"/>
+      <xaif:Assignment statement_id="6" lineNumber="4" do_chain="1">
+        <xaif:AssignmentLHS du_ud="6" alias="2">
+          <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="A_1"/>
+        </xaif:AssignmentLHS>
+        <xaif:AssignmentRHS>
+          <xaif:Constant vertex_id="1" type="bool" feType="I4" value="true"/>
+        </xaif:AssignmentRHS>
+      </xaif:Assignment>
+      <xaif:Assignment statement_id="8" lineNumber="5" do_chain="1">
+        <xaif:AssignmentLHS du_ud="6" alias="3">
+          <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="B_2"/>
+        </xaif:AssignmentLHS>
+        <xaif:AssignmentRHS>
+          <xaif:Constant vertex_id="1" type="bool" feType="I4" value="false"/>
+        </xaif:AssignmentRHS>
+      </xaif:Assignment>
+      <xaif:Assignment statement_id="10" lineNumber="6" do_chain="1">
+        <xaif:AssignmentLHS du_ud="6" alias="4">
+          <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="C_3"/>
+        </xaif:AssignmentLHS>
+        <xaif:AssignmentRHS>
+          <xaif:Constant vertex_id="1" type="bool" feType="I4" value="false"/>
+        </xaif:AssignmentRHS>
+      </xaif:Assignment>
     </xaif:BasicBlock>
 
     <xaif:Branch vertex_id="16" lineNumber="7">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Oct 31 13:54:32 2008 -->
+<!-- XAIF file translated from WHIRL at Fri Jan  9 11:30:01 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -148,11 +148,30 @@
           <xaif:Constant vertex_id="1" type="real" feType="F8" value="1.00000000000000000000e+00"/>
         </xaif:AssignmentRHS>
       </xaif:Assignment>
-      <xaif:Marker statement_id="8" annotation="{WHIRL_Id#8} [passive: OPR_STID]"/>
+      <xaif:Assignment statement_id="8" lineNumber="11" do_chain="4">
+        <xaif:AssignmentLHS du_ud="1" alias="3">
+          <xaif:SymbolReference vertex_id="1" scope_id="1" symbol_id=".preg_I8_3" annotation="{PregId#264}"/>
+        </xaif:AssignmentLHS>
+        <xaif:AssignmentRHS>
+          <xaif:Intrinsic vertex_id="1" name="int_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="2" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="3" name="sub_scal_scal" type="***"/>
+          <xaif:Constant vertex_id="4" type="real" feType="F8" value="1.00000000000000000000e+01"/>
+          <xaif:VariableReference vertex_id="5" du_ud="3" alias="2">
+            <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="ID_1"/>
+          </xaif:VariableReference>
+          <xaif:ExpressionEdge edge_id="1" source="4" target="3" position="1"/>
+          <xaif:ExpressionEdge edge_id="2" source="5" target="3" position="2"/>
+          <xaif:Constant vertex_id="6" type="real" feType="F8" value="1.00000000000000000000e+00"/>
+          <xaif:ExpressionEdge edge_id="3" source="3" target="2" position="1"/>
+          <xaif:ExpressionEdge edge_id="4" source="6" target="2" position="2"/>
+          <xaif:ExpressionEdge edge_id="5" source="2" target="1" position="1"/>
+        </xaif:AssignmentRHS>
+      </xaif:Assignment>
     </xaif:BasicBlock>
 
     <xaif:ForLoop vertex_id="3" reversal="anonymous" lineNumber="11">
-      <xaif:Initialization statement_id="17">
+      <xaif:Initialization statement_id="17" do_chain="5">
         <xaif:AssignmentLHS du_ud="2" alias="3">
           <xaif:SymbolReference vertex_id="1" scope_id="1" symbol_id=".preg_I8_3" annotation="{PregId#265}"/>
         </xaif:AssignmentLHS>
@@ -171,7 +190,7 @@
         <xaif:ExpressionEdge edge_id="1" source="2" target="1" position="1"/>
         <xaif:ExpressionEdge edge_id="2" source="4" target="1" position="2"/>
       </xaif:Condition>
-      <xaif:Update statement_id="22">
+      <xaif:Update statement_id="22" do_chain="5">
         <xaif:AssignmentLHS du_ud="4" alias="3">
           <xaif:SymbolReference vertex_id="1" scope_id="1" symbol_id=".preg_I8_3" annotation="{PregId#265}"/>
         </xaif:AssignmentLHS>

@@ -38,7 +38,7 @@ C     **** Statements ****
 C
       DO WHILE(I .LT. 10)
         Y = (I +(-2))
-        I = I + 2
+        I = (I + 2)
       END DO
       END SUBROUTINE
 

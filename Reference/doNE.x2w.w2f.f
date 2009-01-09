@@ -17,8 +17,8 @@ C     **** Statements ****
 C
       I = 3
       DO WHILE(I .ne. 0)
-        J = I + J
-        I = I +(-1)
+        J = (I + J)
+        I = (I +(-1))
       END DO
       IF(J .eq. 7) THEN
         WRITE(*, *) 'OK'
