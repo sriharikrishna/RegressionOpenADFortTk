@@ -132,8 +132,9 @@ def fileCompare(fcfileName,fcmode,ignoreString):
 		return 0
 	    else:
 		shutil.copy(fcfileName,referenceFile)
-		if (os.system("hg add "+referenceFile)):
-		    raise RuntimeError, "\"hg add "+referenceFile+" not successful" 
+                cmd="hg add "+referenceFile
+		if (os.system(cmd)):
+		    raise RuntimeError, "\""+cmd+"\" not successful"
 	else: # BATCHMODE
 	    sys.stdout.write("\n")
             sys.stdout.flush()
@@ -431,9 +432,6 @@ def main():
             compilerOpts+=" | "
     compilerOpts+=" ]"        
     opt = OptionParser(usage=usage)
-    opt.add_option('-i','--ignoreFailingCases',dest='ignoreFailingCases',
-                   help="don't if we should try to run  the cases known to fail",
-                   action='store_true',default=False)
     opt.add_option('-a','--offerAcceptAsDefault',dest='offerAcceptAsDefault',
                    help="offer accept as default for updating reference files",
                    action='store_true',default=False)
@@ -443,20 +441,23 @@ def main():
     opt.add_option('-b','--batchMode',dest='batchMode',
                    help="run in batchMode suppressing output",
                    action='store_true',default=False)
-    opt.add_option('-d','--diff',dest='diff',
-                   help="different diff command (e.g. kdiff3) to show differences in case the regular diff detects differences")
-    opt.add_option('-v','--verbose',dest='verbose',
-                   help="let the pipeline components produce some extra output",
-                   action='store_true',default=False)
     opt.add_option('-c','--compiler',dest='compiler',
                    type='choice', choices=compilers,
                    help="pick a compiler (defaults to ifort) from the following list: " +compilerOpts+" - the compiler should be in PATH; we use F90FLAGS when set in the environment",
                    default='ifort')
+    opt.add_option('-d','--diff',dest='diff',
+                   help="different diff command (e.g. kdiff3) to show differences in case the regular diff detects differences")
+    opt.add_option('-i','--ignoreFailingCases',dest='ignoreFailingCases',
+                   help="don't ask whether we should try to run the cases known to fail",
+                   action='store_true',default=False)
     opt.add_option('-O','--optimize',dest='optimize',
                    help="turn compiler optimization on (default off)",
                    action='store_true',default=False)
     opt.add_option('-u','--unstructured',dest='unstructured',
                    help="translate as unstructured control flow (default off)",
+                   action='store_true',default=False)
+    opt.add_option('-v','--verbose',dest='verbose',
+                   help="let the pipeline components produce some extra output",
                    action='store_true',default=False)
     (options, args) = opt.parse_args()
     global globalNewFailCount
