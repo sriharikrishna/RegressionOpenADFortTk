@@ -285,6 +285,9 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     whirl2xaif=os.path.join(os.environ['OPENADFORTTKROOT'],'bin','whirl2xaif')
     whirl2sexp=os.path.join(os.environ['OPENADFORTTKROOT'],'bin','whirl2sexp')
     xaif2whirl=os.path.join(os.environ['OPENADFORTTKROOT'],'bin','xaif2whirl')
+    unStructPrefix="UnStruct_"
+    postProcess="python "+os.path.join(os.environ['OPENADFORTTK_BASE'],'tools','SourceProcessing','postProcess.py')
+    postProcessPrefix="PostProcess_" # file names with this prefix are postprocessed
     sys.stdout.flush()
     basename,ext=os.path.splitext(exName)
     failCountAdjusted=False
@@ -374,7 +377,7 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
     # fortran -> whirl -> xaif -> whirl
-    if (globalUnstructured or basename[0:3]=="UnStruct_") :
+    if (globalUnstructured or basename[0:len(unStructPrefix)]==unStructPrefix) :
         print "   Unstructred control flow!"
         cmd=xaif2whirl + " " + basename+".B  " + basename+".xaif"
     else:    
@@ -396,6 +399,17 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
         print cmd
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
+    if (basename[0:len(postProcessPrefix)]==postProcessPrefix) :
+       cmd= postProcess+" "+basename+".x2w.w2f.f"
+       if globalVerbose :
+           print cmd
+       if (os.system(cmd)):
+           raise MakeError, "Error while executing \"" + cmd + "\""
+       cmd= "mv "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
+       if globalVerbose :
+           print cmd
+       if (os.system(cmd)):
+           raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".x2w.w2f.f","","")
     # fortran -> whirl -> xaif -> whirl -> fortran -> binary
     cmd=compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -o " + basename + ".x2w.w2f.run " + basename+".x2w.w2f.f"
@@ -496,6 +510,9 @@ def main():
         if options.optimize:
 	  optimizeFlag='-O3'
         cmd=options.compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -c "+ "Extras/w2f__types.f90"
+        if (os.system(cmd)):
+            raise MakeError, "Error while executing \"" + cmd + "\""
+        cmd=options.compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -c "+ "Extras/OAD_active.f90"
         if (os.system(cmd)):
             raise MakeError, "Error while executing \"" + cmd + "\""
 	(examples,rangeStart,rangeEnd) = populateExamplesList(args[0:])
