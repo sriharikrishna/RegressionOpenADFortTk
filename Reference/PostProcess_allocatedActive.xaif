@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Tue Mar 17 17:02:02 2009 -->
+<!-- XAIF file translated from WHIRL at Fri Apr  3 17:24:42 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -100,21 +100,7 @@
 
     <xaif:BasicBlock vertex_id="2" scope_id="2">
       <xaif:Marker statement_id="7" annotation="{WHIRL_Id#7} [passive: OPR_PRAGMA]"/>
-      <xaif:SubroutineCall statement_id="8" scope_id="1" lineNumber="6" symbol_id="_ALLOCATE_22">
-        <xaif:Argument position="1">
-          <xaif:VariableReference vertex_id="1" du_ud="4" alias="2">
-            <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="X_1"/>
-            <xaif:ArrayElementReference vertex_id="2">
-              <xaif:IndexTriplet>
-                <xaif:Index>
-                  <xaif:Constant vertex_id="1" type="integer" feType="I4" value="1"/>
-                </xaif:Index>
-              </xaif:IndexTriplet>
-            </xaif:ArrayElementReference>
-            <xaif:VariableReferenceEdge edge_id="1" source="1" target="2"/>
-          </xaif:VariableReference>
-        </xaif:Argument>
-      </xaif:SubroutineCall>
+      <xaif:Marker statement_id="8" annotation="{WHIRL_Id#8} [passive: OPR_CALL]"/>
       <xaif:Assignment statement_id="16" lineNumber="7" do_chain="1">
         <xaif:AssignmentLHS du_ud="1" alias="3">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Y_2"/>
