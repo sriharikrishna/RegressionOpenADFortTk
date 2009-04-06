@@ -34,7 +34,7 @@ C
       INTEGER(w2f__i4) X(1 : 2)
       INTEGER(w2f__i4) Y(1 : 2)
 C
-C     **** Statements ****
+C     **** Top Level Pragmas ****
 C
       interface 
         SUBROUTINE foo(X)
@@ -52,6 +52,9 @@ C
 
       end interface 
       
+C
+C     **** Statements ****
+C
       X(1) = 1
       Y(2) = 2
       CALL foo(X(1))

@@ -4,7 +4,7 @@
       IMPLICIT NONE
       SAVE
 C
-C     **** Statements ****
+C     **** Top Level Pragmas ****
 C
       interface  AMETHOD
         module procedure  AMETHODIMPL
@@ -21,6 +21,9 @@ C
 
       end interface 
       
+C
+C     **** Statements ****
+C
 C$OPENAD XXX Afirstpragma
 C$OPENAD XXX Asecondpragma
       CONTAINS

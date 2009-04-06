@@ -27,9 +27,6 @@ C     **** Top Level Pragmas ****
 C
 C$OPENAD INDEPENDENT(X)
 C$OPENAD DEPENDENT(Y)
-C
-C     **** Statements ****
-C
       interface 
         SUBROUTINE foo(X)
         use w2f__types
@@ -39,6 +36,9 @@ C
 
       end interface 
       
+C
+C     **** Statements ****
+C
       X(1)%v = 2.0
       X(2)%v = 3.0
       CALL foo(X(1))
