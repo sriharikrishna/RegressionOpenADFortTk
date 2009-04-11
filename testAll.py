@@ -377,11 +377,12 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
     # fortran -> whirl -> xaif -> whirl
+    cmd=xaif2whirl + " -t OpenADTy_active "
     if (globalUnstructured or basename[0:len(unStructPrefix)]==unStructPrefix) :
         print "   Unstructred control flow!"
-        cmd=xaif2whirl + " " + basename+".B  " + basename+".xaif"
     else:    
-        cmd=xaif2whirl + " --structured " + basename+".B  " + basename+".xaif" 
+        cmd+="--structured "
+    cmd+=basename+".B  " + basename+".xaif"
     if globalVerbose :
         print cmd
     if (os.system(cmd)):
@@ -394,22 +395,22 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".x2w.sxp","","")
     # fortran -> whirl -> xaif -> whirl -> fortran
-    cmd=whirl2f + " -openad " + basename+".x2w.B"
+    cmd=whirl2f + " -openad -openadType OpenADTy_active " + basename+".x2w.B"
     if globalVerbose :
         print cmd
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     if (basename[0:len(postProcessPrefix)]==postProcessPrefix) :
-       cmd= postProcess+" "+basename+".x2w.w2f.f"
-       if globalVerbose :
-           print cmd
-       if (os.system(cmd)):
-           raise MakeError, "Error while executing \"" + cmd + "\""
-       cmd= "mv "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
-       if globalVerbose :
-           print cmd
-       if (os.system(cmd)):
-           raise MakeError, "Error while executing \"" + cmd + "\""
+        cmd=postProcess+" --abstractType OpenADTy_active -o "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
+        if globalVerbose :
+            print cmd
+        if (os.system(cmd)):
+            raise MakeError, "Error while executing \"" + cmd + "\""
+        cmd= "mv "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
+        if globalVerbose :
+            print cmd
+        if (os.system(cmd)):
+            raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".x2w.w2f.f","","")
     # fortran -> whirl -> xaif -> whirl -> fortran -> binary
     cmd=compiler+" "+optimizeFlag+" "+os.environ['F90FLAGS']+" -o " + basename + ".x2w.w2f.run " + basename+".x2w.w2f.f"
