@@ -24,7 +24,8 @@ C
 C
 C     **** Statements ****
 C
-      I = 6
+      I = 2
+      I = (I * 3)
       IF(I .eq. 6) THEN
         WRITE(*, *) 'OK'
       ELSE
