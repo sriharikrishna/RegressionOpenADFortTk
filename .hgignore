@@ -6,3 +6,10 @@ syntax: glob
 *~
 *.orig
 *.MOD
+*.out
+*.mod-whirl
+syntax: regexp
+^[^/]+\.f90
+^[^/]+\.f
+^[^/]+\.xaif
+^[^/]+\.sxp
