@@ -20,7 +20,7 @@ C
       ALLOCATE(X(1))
       Y%v = (X(1)%v*2.0D00)
       IF(ALLOCATED(X)) THEN
-        WRITE(*, *) 'OK'
+        WRITE(*,*) 'OK'
       ENDIF
       
       END PROGRAM

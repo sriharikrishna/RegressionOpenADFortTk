@@ -44,7 +44,7 @@ C
       CALL foo(X(1))
       Y(1:2)%v = X(1:2)%v
       IF (Y(1)%v.eq.4.0D00) THEN
-        WRITE(*, *) 'OK'
+        WRITE(*,*) 'OK'
       ENDIF
       
       END PROGRAM
