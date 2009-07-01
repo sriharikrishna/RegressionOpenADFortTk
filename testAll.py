@@ -292,20 +292,25 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     basename,ext=os.path.splitext(exName)
     failCountAdjusted=False
     haveRef=os.path.exists(os.path.join('Reference',basename+'.x2w.w2f.f'))
-    if not haveRef :
+    failFile=None
+    if (os.path.exists(os.path.join('Reference',exName+'.FAIL'))):
+        failFile=os.path.join('Reference',exName+'.FAIL')
+    else:
+        if(os.path.exists(os.path.join('Reference',exName+'.FAIL'+compiler))):
+            failFile=os.path.join('Reference',exName+'.FAIL'+compiler)
+    if (failFile or not haveRef) :
         if globalIgnoreFailingCases : 
             printSep("*","** skipping %i of %i (%s) - no reference file" % (exNum,totalNum,exName),sepLength)
-            if (os.path.exists(os.path.join('Reference',exName+'.FAIL'))):
+            if failFile:
                 sys.stdout.write("   failure reason:")
                 sys.stdout.flush()
-                os.system("cat "+os.path.join('Reference',exName+'.FAIL'))
+                os.system("cat "+failFile)
             return 0
-        else: 
-            printSep("*","** testing %i of %i (%s)" % (exNum,totalNum,exName),sepLength)
-        if (os.path.exists(os.path.join('Reference',exName+'.FAIL'))):
-                sys.stdout.write("   failure reason:")
-                sys.stdout.flush()
-                os.system("cat "+os.path.join('Reference',exName+'.FAIL'))
+        printSep("*","** testing %i of %i (%s)" % (exNum,totalNum,exName),sepLength)
+        if failFile:
+            sys.stdout.write("   failure reason:")
+            sys.stdout.flush()
+            os.system("cat "+failFile)
 	sys.stdout.write("   reference file: "+basename+'.x2w.w2f.f'+" unavailable")
 	if not (globalBatchMode):
             answer=""
