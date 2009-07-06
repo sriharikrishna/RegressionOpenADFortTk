@@ -8,6 +8,7 @@ syntax: glob
 *.MOD
 *.out
 *.mod-whirl
+*.xsd
 syntax: regexp
 ^[^/]+\.f90
 ^[^/]+\.f

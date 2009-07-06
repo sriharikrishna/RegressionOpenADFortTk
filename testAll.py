@@ -12,6 +12,7 @@ globalIgnoreFailingCases=False
 globalOfferAcceptAsDefault=False
 globalAcceptAll=False
 globalVerbose=False
+globalValidate = False
 globalUnstructured=False
 globalOkCount=0
 globalKnownFailCount=0
@@ -381,8 +382,20 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
+
+
+
+
     # fortran -> whirl -> xaif -> whirl
     cmd=xaif2whirl + " -t OpenADTy_active "
+    if globalValidate:
+        # first link the schema files
+        for aSchemaFile in ['xaif','xaif_base','xaif_inlinable_intrinsics','xaif_derivative_propagator','xaif_output']:
+            linkCmd = 'ln -sf '+os.path.join(os.environ['XAIFSCHEMAROOT'],'schema',aSchemaFile+'.xsd')
+            if (os.system(linkCmd)):
+                raise MakeError, "Error while executing \"" + linkCmd + "\""
+        # turn on validation for xaif2whirl
+        cmd += '-v '
     if (globalUnstructured or basename[0:len(unStructPrefix)]==unStructPrefix) :
         print "   Unstructred control flow!"
     else:    
@@ -390,8 +403,14 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     cmd+=basename+".B  " + basename+".xaif"
     if globalVerbose :
         print cmd
-    if (os.system(cmd)):
+    cmdResult = os.system(cmd)
+    print "cmdResult =",cmdResult
+    #if (os.system(cmd)):
+    if (cmdResult):
 	raise MakeError, "Error while executing \"" + cmd + "\""
+
+
+
     # fortran -> whirl -> xaif -> whirl -> sxp
     cmd=whirl2sexp + " " + basename+".x2w.B > " + basename+".x2w.sxp" 
     if globalVerbose :
@@ -479,6 +498,9 @@ def main():
     opt.add_option('-v','--verbose',dest='verbose',
                    help="let the pipeline components produce some extra output",
                    action='store_true',default=False)
+    opt.add_option('-V','--validate',dest='validate',
+                   help="Turn on validation for xaif2whirl (requires that environment variable XAIFSCHEMAROOT be set)",
+                   action='store_true',default=False)
     (options, args) = opt.parse_args()
     global globalNewFailCount
     globalNewFailCount=0
@@ -501,6 +523,11 @@ def main():
         if options.verbose :
             global globalVerbose
             globalVerbose=True
+        if options.validate:
+	    if not (os.environ.has_key('XAIFSCHEMAROOT')):
+	        raise ConfigError, "validation requested, but environment variable XAIFSCHEMAROOT not defined"
+            global globalValidate
+            globalValidate = True
         if options.unstructured :
             global globalUnstructured
             globalUnstructured=True
