@@ -1,0 +1,1 @@
+fails because the shape of the pointer array BTN cannot be properly determined and specified in the xaif; <a href="https://newtrac.mcs.anl.gov/projects/openAD/ticket/3">bug report</a>
