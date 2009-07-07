@@ -383,9 +383,6 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     fileCompare(basename+".sxp","","")
 
-
-
-
     # fortran -> whirl -> xaif -> whirl
     cmd=xaif2whirl + " -t OpenADTy_active "
     if globalValidate:
@@ -403,13 +400,8 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     cmd+=basename+".B  " + basename+".xaif"
     if globalVerbose :
         print cmd
-    cmdResult = os.system(cmd)
-    print "cmdResult =",cmdResult
-    #if (os.system(cmd)):
-    if (cmdResult):
+    if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
-
-
 
     # fortran -> whirl -> xaif -> whirl -> sxp
     cmd=whirl2sexp + " " + basename+".x2w.B > " + basename+".x2w.sxp" 
