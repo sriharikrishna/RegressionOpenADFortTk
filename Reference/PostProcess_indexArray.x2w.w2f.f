@@ -1,12 +1,11 @@
-
       PROGRAM indexarray
       use w2f__types
       use OAD_active
-      IMPLICIT NONE
+      implicit none
 C
 C     **** Local Variables and Functions ****
 C
-      INTEGER(w2f__i4) I(1 : 2)
+      integer(w2f__i4) :: I(1:2)
       type(active) :: L(1:2)
       type(active) :: R(1:3)
 C
@@ -24,5 +23,4 @@ C
       I(2) = 3
       L(1:2)%v = DBLE(R(I(1:2))%v)
       WRITE(*,*) L%v
-      
-      END PROGRAM
+       END PROGRAM

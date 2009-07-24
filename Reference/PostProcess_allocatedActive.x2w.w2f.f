@@ -1,13 +1,12 @@
-
       PROGRAM allocatedarray
       use w2f__types
       use OAD_active
-      IMPLICIT NONE
+      implicit none
 C
 C     **** Local Variables and Functions ****
 C
       type(active) :: X(:)
-      ALLOCATABLE X
+      allocatable X
       type(active) :: Y
 C
 C     **** Top Level Pragmas ****
@@ -19,8 +18,7 @@ C     **** Statements ****
 C
       ALLOCATE(X(1))
       Y%v = (X(1)%v*2.0D00)
-      IF(ALLOCATED(X)) THEN
+      IF (ALLOCATED(X)) THEN
         WRITE(*,*) 'OK'
       ENDIF
-      
-      END PROGRAM
+       END PROGRAM
