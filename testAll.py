@@ -13,7 +13,6 @@ globalOfferAcceptAsDefault=False
 globalAcceptAll=False
 globalVerbose=False
 globalValidate = False
-globalUnstructured=False
 globalOkCount=0
 globalKnownFailCount=0
 globalNewFailCount=0
@@ -393,10 +392,6 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
                 raise MakeError, "Error while executing \"" + linkCmd + "\""
         # turn on validation for xaif2whirl
         cmd += '-v '
-    if (globalUnstructured or basename[0:len(unStructPrefix)]==unStructPrefix) :
-        print "   Unstructred control flow!"
-    else:    
-        cmd+="--structured "
     cmd+=basename+".B  " + basename+".xaif"
     if globalVerbose :
         print cmd
@@ -484,9 +479,6 @@ def main():
     opt.add_option('-O','--optimize',dest='optimize',
                    help="turn compiler optimization on (default off)",
                    action='store_true',default=False)
-    opt.add_option('-u','--unstructured',dest='unstructured',
-                   help="translate as unstructured control flow (default off)",
-                   action='store_true',default=False)
     opt.add_option('-v','--verbose',dest='verbose',
                    help="let the pipeline components produce some extra output",
                    action='store_true',default=False)
@@ -520,9 +512,6 @@ def main():
 	        raise ConfigError, "validation requested, but environment variable XAIFSCHEMAROOT not defined"
             global globalValidate
             globalValidate = True
-        if options.unstructured :
-            global globalUnstructured
-            globalUnstructured=True
         if options.optimize :
             os.environ['OPTIMIZE']='true'
 	if not (os.environ.has_key('OPEN64ROOT')):
