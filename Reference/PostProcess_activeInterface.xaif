@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Mon Apr  6 08:10:26 2009 -->
+<!-- XAIF file translated from WHIRL at Wed Jul 29 16:54:31 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -213,7 +213,7 @@
           <xaif:Constant vertex_id="1" type="real" feType="F4" value="3.0000000000e+00"/>
         </xaif:AssignmentRHS>
       </xaif:Assignment>
-      <xaif:SubroutineCall statement_id="23" scope_id="1" lineNumber="17" symbol_id="foo__20">
+      <xaif:SubroutineCall statement_id="23" scope_id="1" lineNumber="17" formalArgCount="1" symbol_id="foo__20">
         <xaif:Argument position="1">
           <xaif:VariableReference vertex_id="1" du_ud="0" alias="1">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_1"/>
@@ -298,7 +298,7 @@
     <xaif:EndBranch vertex_id="8"/>
 
     <xaif:BasicBlock vertex_id="34" scope_id="3">
-      <xaif:SubroutineCall statement_id="75" scope_id="1" lineNumber="22" symbol_id="_END_24"/>
+      <xaif:SubroutineCall statement_id="75" scope_id="1" lineNumber="22" formalArgCount="0" symbol_id="_END_24"/>
     </xaif:BasicBlock>
 
     <xaif:Exit vertex_id="10"/>

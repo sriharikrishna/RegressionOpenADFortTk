@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 22 15:00:17 2009 -->
+<!-- XAIF file translated from WHIRL at Wed Jul 29 16:54:43 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -223,7 +223,7 @@
       <xaif:Marker statement_id="68" annotation="{WHIRL_Id#68} [passive: OPR_PRAGMA]"/>
       <xaif:Marker statement_id="69" annotation="{WHIRL_Id#69} [WRITE***]"/>
       <xaif:Marker statement_id="82" annotation="{WHIRL_Id#82} [passive: OPR_PRAGMA]"/>
-      <xaif:SubroutineCall statement_id="83" scope_id="1" lineNumber="13" symbol_id="_END_21"/>
+      <xaif:SubroutineCall statement_id="83" scope_id="1" lineNumber="13" formalArgCount="0" symbol_id="_END_21"/>
     </xaif:BasicBlock>
 
     <xaif:Exit vertex_id="4"/>

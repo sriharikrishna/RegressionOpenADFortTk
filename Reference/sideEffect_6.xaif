@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Tue Dec 16 14:07:40 2008 -->
+<!-- XAIF file translated from WHIRL at Wed Jul 29 17:35:20 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -349,7 +349,7 @@
     <xaif:BasicBlock vertex_id="11" scope_id="3">
       <xaif:Marker statement_id="7" annotation="{WHIRL_Id#7} [passive: OPR_PRAGMA]"/>
       <xaif:Marker statement_id="8" annotation="{WHIRL_Id#8} [cassignstmt]"/>
-      <xaif:SubroutineCall statement_id="20" scope_id="1" lineNumber="17" symbol_id="foo__20">
+      <xaif:SubroutineCall statement_id="20" scope_id="1" lineNumber="17" formalArgCount="2" symbol_id="foo__20">
         <xaif:Argument position="1">
           <xaif:VariableReference vertex_id="1" du_ud="0" alias="1">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="A_3"/>
@@ -362,7 +362,7 @@
         </xaif:Argument>
       </xaif:SubroutineCall>
       <xaif:Marker statement_id="31" annotation="{WHIRL_Id#31} [cassignstmt]"/>
-      <xaif:SubroutineCall statement_id="43" scope_id="1" lineNumber="19" symbol_id="foo__20">
+      <xaif:SubroutineCall statement_id="43" scope_id="1" lineNumber="19" formalArgCount="2" symbol_id="foo__20">
         <xaif:Argument position="1">
           <xaif:VariableReference vertex_id="1" du_ud="0" alias="1">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="A_3"/>
@@ -442,7 +442,7 @@
       <xaif:Marker statement_id="13" annotation="{WHIRL_Id#13} [passive: OPR_PRAGMA]"/>
       <xaif:Marker statement_id="14" annotation="{WHIRL_Id#14} [WRITE***]"/>
       <xaif:Marker statement_id="27" annotation="{WHIRL_Id#27} [passive: OPR_PRAGMA]"/>
-      <xaif:SubroutineCall statement_id="28" scope_id="1" lineNumber="29" symbol_id="_END_30"/>
+      <xaif:SubroutineCall statement_id="28" scope_id="1" lineNumber="29" formalArgCount="0" symbol_id="_END_30"/>
     </xaif:BasicBlock>
 
     <xaif:Exit vertex_id="16"/>

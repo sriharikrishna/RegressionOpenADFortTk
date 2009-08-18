@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Jan  9 11:40:59 2009 -->
+<!-- XAIF file translated from WHIRL at Wed Jul 29 16:53:45 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -103,14 +103,14 @@
 
     <xaif:BasicBlock vertex_id="2" scope_id="2">
       <xaif:Marker statement_id="5" annotation="{WHIRL_Id#5} [passive: OPR_PRAGMA]"/>
-      <xaif:SubroutineCall statement_id="6" scope_id="1" lineNumber="12" symbol_id="FOO_20">
+      <xaif:SubroutineCall statement_id="6" scope_id="1" lineNumber="12" formalArgCount="1" symbol_id="FOO_20">
         <xaif:Argument position="1">
           <xaif:VariableReference vertex_id="1" du_ud="0" alias="1">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="N_1"/>
           </xaif:VariableReference>
         </xaif:Argument>
       </xaif:SubroutineCall>
-      <xaif:SubroutineCall statement_id="9" scope_id="1" lineNumber="25" symbol_id="_END_22"/>
+      <xaif:SubroutineCall statement_id="9" scope_id="1" lineNumber="25" formalArgCount="0" symbol_id="_END_22"/>
     </xaif:BasicBlock>
 
     <xaif:Exit vertex_id="4"/>
