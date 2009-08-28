@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 29 16:54:45 2009 -->
+<!-- XAIF file translated from WHIRL at Fri Aug 28 11:40:25 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -134,7 +134,7 @@
 
     <xaif:Branch vertex_id="18" lineNumber="9">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="equal"/>
+        <xaif:BooleanOperation vertex_id="1" name="equal" rType="integer" rShape="scalar"/>
         <xaif:VariableReference vertex_id="2" du_ud="4" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Y_3"/>
         </xaif:VariableReference>
