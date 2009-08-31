@@ -368,7 +368,10 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     # fortran -> whirl -> xaif
-    cmd=whirl2xaif + " " + basename+".B -o " + basename+".xaif" 
+    cmd=whirl2xaif
+    if globalVerbose :
+       cmd=cmd+" --debug 1"
+    cmd=cmd + " " + basename+".B -o " + basename+".xaif" 
     if globalVerbose :
         print cmd
     if (os.system(cmd)):

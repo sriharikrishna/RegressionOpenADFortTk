@@ -342,11 +342,11 @@
             )
           (label_tab
             (1 ("10" 499) LKIND_DEFAULT (flg ""))
-            (2 ("" 0) LKIND_DEFAULT (flg ""))
+            (2 ("" 0) LKIND_LOOP_GEN (flg ""))
             (3 ("20" 502) LKIND_DEFAULT (flg ""))
-            (4 ("" 0) LKIND_DEFAULT (flg ""))
-            (5 ("" 0) LKIND_DEFAULT (flg ""))
-            (6 ("" 0) LKIND_DEFAULT (flg ""))
+            (4 ("" 0) LKIND_LOOP_GEN (flg ""))
+            (5 ("" 0) LKIND_INTERNAL (flg ""))
+            (6 ("" 0) LKIND_INTERNAL (flg ""))
             )
           (preg_tab
             )
@@ -527,10 +527,10 @@
           (st_attr_tab
             )
           (label_tab
-            (1 ("" 0) LKIND_DEFAULT (flg ""))
-            (2 ("" 0) LKIND_DEFAULT (flg ""))
-            (3 ("" 0) LKIND_DEFAULT (flg ""))
-            (4 ("" 0) LKIND_DEFAULT (flg ""))
+            (1 ("" 0) LKIND_INTERNAL (flg ""))
+            (2 ("" 0) LKIND_INTERNAL (flg ""))
+            (3 ("" 0) LKIND_INTERNAL (flg ""))
+            (4 ("" 0) LKIND_INTERNAL (flg ""))
             )
           (preg_tab
             )
