@@ -352,7 +352,7 @@
             )
           (label_tab
             (1 ("10" 522) LKIND_DEFAULT (flg ""))
-            (2 ("" 0) LKIND_DEFAULT (flg ""))
+            (2 ("" 0) LKIND_INTERNAL (flg ""))
             )
           (preg_tab
             )

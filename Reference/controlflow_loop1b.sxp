@@ -262,10 +262,10 @@
           (st_attr_tab
             )
           (label_tab
-            (1 ("" 0) LKIND_DEFAULT (flg ""))
-            (2 ("" 0) LKIND_DEFAULT (flg ""))
-            (3 ("" 0) LKIND_DEFAULT (flg ""))
-            (4 ("" 0) LKIND_DEFAULT (flg ""))
+            (1 ("" 0) LKIND_LOOP_GEN (flg ""))
+            (2 ("" 0) LKIND_LOOP_GEN (flg ""))
+            (3 ("" 0) LKIND_INTERNAL (flg ""))
+            (4 ("" 0) LKIND_INTERNAL (flg ""))
             )
           (preg_tab
             )

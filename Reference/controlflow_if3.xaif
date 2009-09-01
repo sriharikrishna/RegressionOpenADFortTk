@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:28:57 2009 -->
+<!-- XAIF file translated from WHIRL at Mon Aug 31 13:30:23 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -111,7 +111,7 @@
   </xaif:DOSetMap>
 
   <!-- ******************************************************************** -->
-  <xaif:ControlFlowGraph vertex_id="12" scope_id="1" symbol_id="controlflow_if__20" annotation="{PU_Id#1}" controlflowgraph_scope_id="2">
+  <xaif:ControlFlowGraph vertex_id="12" scope_id="1" symbol_id="controlflow_if__20" annotation="{PU_Id#1}" controlflowgraph_scope_id="2" structured="0">
     <xaif:ArgumentList>
       <xaif:ArgumentSymbolReference position="1" scope_id="2" symbol_id="XX_1" intent="in" annotation="{WHIRL_Id#2}"/>
       <xaif:ArgumentSymbolReference position="2" scope_id="2" symbol_id="Y_2" intent="inout" annotation="{WHIRL_Id#3}"/>

@@ -42,37 +42,37 @@ C
       GO TO 4
 4     CONTINUE
       IF(X .GT. 0.0D00) THEN
-        GO TO 5
+        GO TO 8
       ELSE
-        GO TO 12
+        GO TO 5
       ENDIF
 5     CONTINUE
+      GO TO 6
+6     CONTINUE
+      GO TO 7
+7     CONTINUE
+      GO TO 14
+8     CONTINUE
       CALL compute(X, Y)
       WRITE(*, *) 'x =', X
       WRITE(*, *) 'y =', Y
-      GO TO 6
-6     CONTINUE
-      IF(Y .LT. 0.0D00) THEN
-        GO TO 7
-      ELSE
-        GO TO 9
-      ENDIF
-7     CONTINUE
-      RETURN
-      GO TO 8
-8     CONTINUE
+      GO TO 9
 9     CONTINUE
-      GO TO 10
+      IF(Y .LT. 0.0D00) THEN
+        GO TO 13
+      ELSE
+        GO TO 10
+      ENDIF
 10    CONTINUE
       GO TO 11
 11    CONTINUE
-      GO TO 3
+      GO TO 12
 12    CONTINUE
-      GO TO 13
+      GO TO 3
 13    CONTINUE
+      RETURN
       GO TO 14
 14    CONTINUE
-      GO TO 8
       END SUBROUTINE
 
       PROGRAM controlflow
