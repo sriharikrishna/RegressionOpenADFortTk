@@ -1,11 +1,11 @@
       PROGRAM indexarray
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
 C
-      integer(w2f__i4) :: I(1:2)
+      INTEGER(w2f__i4) I(1 : 2)
       type(active) :: L(1:2)
       type(active) :: R(1:3)
 C

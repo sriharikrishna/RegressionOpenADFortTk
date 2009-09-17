@@ -1,12 +1,12 @@
       PROGRAM allocatedarray
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
 C
       type(active) :: X(:)
-      allocatable X
+      ALLOCATABLE X
       type(active) :: Y
 C
 C     **** Top Level Pragmas ****
