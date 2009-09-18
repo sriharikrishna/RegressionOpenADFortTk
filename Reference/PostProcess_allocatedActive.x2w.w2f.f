@@ -1,3 +1,4 @@
+
       PROGRAM allocatedarray
       use w2f__types
       use OAD_active
@@ -21,4 +22,5 @@ C
       IF (ALLOCATED(X)) THEN
         WRITE(*,*) 'OK'
       ENDIF
-       END PROGRAM
+      
+      END PROGRAM

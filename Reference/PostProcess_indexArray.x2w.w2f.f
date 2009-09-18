@@ -1,3 +1,4 @@
+
       PROGRAM indexarray
       use w2f__types
       use OAD_active
@@ -23,4 +24,5 @@ C
       I(2) = 3
       L(1:2)%v = DBLE(R(I(1:2))%v)
       WRITE(*,*) L%v
-       END PROGRAM
+      
+      END PROGRAM

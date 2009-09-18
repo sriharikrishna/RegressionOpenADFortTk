@@ -1,4 +1,5 @@
-      subroutine foo(A,B,C,D)
+
+      SUBROUTINE foo(A, B, C, D)
       use w2f__types
       use OAD_active
       IMPLICIT NONE
@@ -31,6 +32,7 @@ C
         D = B
       ENDIF
       END SUBROUTINE
+
       PROGRAM optparm1
       use w2f__types
       use OAD_active
@@ -58,7 +60,9 @@ C$OPENAD DEPENDENT(Y)
         REAL(w2f__8) D
         OPTIONAL  D
         END SUBROUTINE
-       end interface 
+
+      end interface 
+
 C
 C     **** Statements ****
 C
@@ -66,4 +70,5 @@ C
       CALL foo(A=X,C=U)
       CALL foo(U,X,Y,V)
       WRITE(*,*) Y,V
-       END PROGRAM
+      
+      END PROGRAM

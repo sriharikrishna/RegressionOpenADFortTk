@@ -1,4 +1,5 @@
-      module moda
+
+      MODULE moda
       use w2f__types
       use OAD_active
       IMPLICIT NONE
@@ -16,12 +17,15 @@ C
         INTEGER(w2f__i4) I
         INTENT(in)  I
         END SUBROUTINE
-       end interface 
+
+      end interface 
+
 C
 C     **** Statements ****
 C
       END MODULE
-      subroutine foo(A,B,C,I)
+
+      SUBROUTINE foo(A, B, C, I)
       use w2f__types
       use OAD_active
       IMPLICIT NONE
@@ -37,6 +41,7 @@ C     **** Statements ****
 C
       A(1)%v = (A(1)%v*2.0D00)
       END SUBROUTINE
+
       PROGRAM activeinterface2
       use w2f__types
       use OAD_active
@@ -64,4 +69,5 @@ C
       IF (Y(1)%v.eq.4.0D00) THEN
         WRITE(*,*) 'OK'
       ENDIF
-       END PROGRAM
+      
+      END PROGRAM
