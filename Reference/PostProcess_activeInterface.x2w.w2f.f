@@ -1,7 +1,8 @@
-      subroutine foo(X)
+
+      SUBROUTINE foo(X)
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Parameters and Result ****
 C
@@ -11,10 +12,11 @@ C     **** Statements ****
 C
       X%v = (X%v*2.0D00)
       END SUBROUTINE
+
       PROGRAM activeinterface
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
 C
@@ -25,13 +27,15 @@ C     **** Top Level Pragmas ****
 C
 C$OPENAD INDEPENDENT(X)
 C$OPENAD DEPENDENT(Y)
-      interface
-        subroutine foo(X)
+      interface 
+        SUBROUTINE foo(X)
         use w2f__types
       use OAD_active
         type(active) :: X
         END SUBROUTINE
-       end interface
+
+      end interface 
+
 C
 C     **** Statements ****
 C
@@ -42,4 +46,5 @@ C
       IF (Y(1)%v.eq.4.0D00) THEN
         WRITE(*,*) 'OK'
       ENDIF
-       END PROGRAM
+      
+      END PROGRAM

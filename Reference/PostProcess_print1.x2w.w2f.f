@@ -1,11 +1,12 @@
+
       PROGRAM print1
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
 C
-      real(w2f__8) :: P
+      REAL(w2f__8) P
       type(active) :: X
       type(active) :: Y
 C
@@ -23,4 +24,5 @@ C
       IF (Y%v.eq.2.0D00) THEN
         WRITE(*,*) 'OK'
       ENDIF
-       END PROGRAM
+      
+      END PROGRAM

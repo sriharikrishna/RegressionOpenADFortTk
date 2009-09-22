@@ -1,0 +1,1 @@
+postprocessor drops identifiers on declarations; see <a href="http://trac.mcs.anl.gov/projects/openAD/ticket/158">bug report</a>.

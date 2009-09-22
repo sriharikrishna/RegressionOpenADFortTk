@@ -1,52 +1,57 @@
-      module moda
+
+      MODULE moda
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
       SAVE
 C
 C     **** Top Level Pragmas ****
 C
-      interface
-        subroutine foo(X,Y,Z,I)
+      interface 
+        SUBROUTINE foo(X, Y, Z, I)
         use w2f__types
       use OAD_active
         type(active) :: X(1:1)
-        real(w2f__8) :: Y(1:1)
-        real(w2f__8) :: Z(1:1)
-        integer(w2f__i4) :: I
+        REAL(w2f__8) Y(1 : 1)
+        REAL(w2f__8) Z(1 : 1)
+        INTEGER(w2f__i4) I
         INTENT(in)  I
         END SUBROUTINE
-       end interface
+
+      end interface 
+
 C
 C     **** Statements ****
 C
       END MODULE
-      subroutine foo(A,B,C,I)
+
+      SUBROUTINE foo(A, B, C, I)
       use w2f__types
       use OAD_active
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Parameters and Result ****
 C
-      integer(w2f__i4) :: I
+      INTEGER(w2f__i4) I
       type(active) :: A(1:I)
-      real(w2f__8) :: B(1:I)
-      real(w2f__8) :: C(1:INT((I+1)))
+      REAL(w2f__8) B(1 : I)
+      REAL(w2f__8) C(1 : INT((I + 1)))
 C
 C     **** Statements ****
 C
       A(1)%v = (A(1)%v*2.0D00)
       END SUBROUTINE
+
       PROGRAM activeinterface2
       use w2f__types
       use OAD_active
       use moda
-      implicit none
+      IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
 C
-      real(w2f__8) :: B(1:2)
-      real(w2f__8) :: C(1:3)
+      REAL(w2f__8) B(1 : 2)
+      REAL(w2f__8) C(1 : 3)
       type(active) :: X(1:2)
       type(active) :: Y(1:2)
 C
@@ -64,4 +69,5 @@ C
       IF (Y(1)%v.eq.4.0D00) THEN
         WRITE(*,*) 'OK'
       ENDIF
-       END PROGRAM
+      
+      END PROGRAM
