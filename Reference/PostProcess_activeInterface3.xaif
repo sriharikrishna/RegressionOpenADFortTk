@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:37:53 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:12:46 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -247,7 +247,7 @@
           <xaif:VariableReferenceEdge edge_id="1" source="1" target="2"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="mul_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="mul_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="7">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="A_3"/>
             <xaif:ArrayElementReference vertex_id="2">
@@ -380,7 +380,7 @@
 
     <xaif:Branch vertex_id="51" lineNumber="28">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="equal"/>
         <xaif:VariableReference vertex_id="2" du_ud="4" alias="10">
           <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="Y_4"/>
           <xaif:ArrayElementReference vertex_id="2">
