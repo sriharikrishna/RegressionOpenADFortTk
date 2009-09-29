@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:29:58 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:10:42 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -185,7 +185,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="X_1"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="div_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="div_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="2">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="X_1"/>
           </xaif:VariableReference>
@@ -201,8 +201,8 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Y_2"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="real" rShape="scalar"/>
-          <xaif:Intrinsic vertex_id="2" name="mul_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="2" name="mul_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="3" du_ud="2" alias="3">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Y_2"/>
           </xaif:VariableReference>
@@ -219,7 +219,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Z_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="3" alias="3">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="Y_2"/>
           </xaif:VariableReference>
@@ -280,7 +280,7 @@
 
     <xaif:Branch vertex_id="50" lineNumber="19">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="greater_than" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="greater_than"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="5">
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_1"/>
         </xaif:VariableReference>
@@ -315,7 +315,7 @@
 
     <xaif:Branch vertex_id="51" lineNumber="26">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="less_than" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="less_than"/>
         <xaif:VariableReference vertex_id="2" du_ud="5" alias="6">
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="Y_2"/>
         </xaif:VariableReference>
