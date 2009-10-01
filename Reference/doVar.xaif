@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:31:39 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:11:04 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -249,7 +249,7 @@
         </xaif:AssignmentRHS>
       </xaif:Initialization>
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="not_equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="not_equal"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="8">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
         </xaif:VariableReference>
@@ -264,7 +264,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="6" alias="8">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
           </xaif:VariableReference>
@@ -283,7 +283,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="J_2"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="8">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
           </xaif:VariableReference>
@@ -340,7 +340,7 @@
         </xaif:AssignmentRHS>
       </xaif:Initialization>
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="not_equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="not_equal"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="8">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
         </xaif:VariableReference>
@@ -355,7 +355,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="10" alias="8">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
           </xaif:VariableReference>
@@ -374,7 +374,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="K_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="8">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_1"/>
           </xaif:VariableReference>
@@ -391,15 +391,15 @@
 
     <xaif:Branch vertex_id="10" lineNumber="18">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="and" rType="integer" rShape="scalar"/>
-        <xaif:BooleanOperation vertex_id="2" name="equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="and"/>
+        <xaif:BooleanOperation vertex_id="2" name="equal"/>
         <xaif:VariableReference vertex_id="3" du_ud="2" alias="9">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="J_2"/>
         </xaif:VariableReference>
         <xaif:Constant vertex_id="4" type="integer" feType="I4" value="7"/>
         <xaif:ExpressionEdge edge_id="1" source="3" target="2" position="1"/>
         <xaif:ExpressionEdge edge_id="2" source="4" target="2" position="2"/>
-        <xaif:BooleanOperation vertex_id="5" name="equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="5" name="equal"/>
         <xaif:VariableReference vertex_id="6" du_ud="2" alias="13">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="K_3"/>
         </xaif:VariableReference>

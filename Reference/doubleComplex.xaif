@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 29 16:53:33 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:10:46 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -121,7 +121,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="DC_1"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="complex_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="complex_scal" type="***" rType="complex"/>
           <xaif:Constant vertex_id="2" type="real" feType="F8" value="0.00000000000000000000e+00"/>
           <xaif:VariableReference vertex_id="3" du_ud="3" alias="2">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I1_2"/>
@@ -135,7 +135,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="P1_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="real_scal" type="***" annotation="{IntrinsicKey#0_REAL}"/>
+          <xaif:Intrinsic vertex_id="1" name="real_scal" type="***" annotation="{IntrinsicKey#0_REAL}" rType="complex"/>
           <xaif:VariableReference vertex_id="2" du_ud="4" alias="3">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="DC_1"/>
           </xaif:VariableReference>
@@ -147,7 +147,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="P2_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="imag_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="imag_scal" type="***" rType="complex"/>
           <xaif:VariableReference vertex_id="2" du_ud="4" alias="3">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="DC_1"/>
           </xaif:VariableReference>
