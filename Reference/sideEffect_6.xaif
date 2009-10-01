@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 29 17:35:20 2009 -->
+<!-- XAIF file translated from WHIRL at Thu Oct  1 15:00:25 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -201,7 +201,7 @@
 
     <xaif:Branch vertex_id="49" lineNumber="4">
       <xaif:Condition>
-        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***"/>
+        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***" rType="integer"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="A_2"/>
           <xaif:ArrayElementReference vertex_id="2">
@@ -210,7 +210,7 @@
                 <xaif:Constant vertex_id="1" type="integer" feType="U8" value="0"/>
               </xaif:Index>
               <xaif:Bound>
-                <xaif:Intrinsic vertex_id="1" name="len" type="***" annotation="{IntrinsicKey#0_LEN_OP}"/>
+                <xaif:Intrinsic vertex_id="1" name="len" type="***" annotation="{IntrinsicKey#0_LEN_OP}" rType="integer"/>
                 <xaif:VariableReference vertex_id="2" du_ud="2" alias="4">
                   <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="A_2"/>
                 </xaif:VariableReference>
@@ -247,7 +247,7 @@
 
     <xaif:Branch vertex_id="50" lineNumber="7">
       <xaif:Condition>
-        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***"/>
+        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***" rType="integer"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="4">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="A_2"/>
           <xaif:ArrayElementReference vertex_id="2">
@@ -256,7 +256,7 @@
                 <xaif:Constant vertex_id="1" type="integer" feType="U8" value="0"/>
               </xaif:Index>
               <xaif:Bound>
-                <xaif:Intrinsic vertex_id="1" name="len" type="***" annotation="{IntrinsicKey#0_LEN_OP}"/>
+                <xaif:Intrinsic vertex_id="1" name="len" type="***" annotation="{IntrinsicKey#0_LEN_OP}" rType="integer"/>
                 <xaif:VariableReference vertex_id="2" du_ud="2" alias="4">
                   <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="A_2"/>
                 </xaif:VariableReference>

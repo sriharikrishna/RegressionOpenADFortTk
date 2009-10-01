@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:47:53 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:13:32 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -174,14 +174,14 @@
 
     <xaif:Branch vertex_id="36" lineNumber="12">
       <xaif:Condition>
-        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***" rType="integer" rShape="scalar"/>
+        <xaif:Intrinsic vertex_id="1" name="string_eq_scal_scal" type="***" rType="integer"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="5">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="N_2"/>
           <xaif:ArrayElementReference vertex_id="2">
             <xaif:IndexTriplet>
               <xaif:Index>
-                <xaif:Intrinsic vertex_id="1" name="sub_scal_scal" type="***" rType="integer" rShape="scalar"/>
-                <xaif:Intrinsic vertex_id="2" name="add_scal_scal" type="***" rType="integer" rShape="scalar"/>
+                <xaif:Intrinsic vertex_id="1" name="sub_scal_scal" type="***" rType="integer"/>
+                <xaif:Intrinsic vertex_id="2" name="add_scal_scal" type="***" rType="integer"/>
                 <xaif:VariableReference vertex_id="3" du_ud="3" alias="4">
                   <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="S_5"/>
                 </xaif:VariableReference>
@@ -281,7 +281,7 @@
 
     <xaif:Branch vertex_id="38" lineNumber="26">
       <xaif:Condition>
-        <xaif:BooleanOperation vertex_id="1" name="equal" rType="integer" rShape="scalar"/>
+        <xaif:BooleanOperation vertex_id="1" name="equal"/>
         <xaif:VariableReference vertex_id="2" du_ud="5" alias="8">
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="N_2"/>
         </xaif:VariableReference>
