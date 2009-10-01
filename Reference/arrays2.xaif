@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 29 16:51:33 2009 -->
+<!-- XAIF file translated from WHIRL at Thu Oct  1 14:59:16 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -266,7 +266,7 @@
           <xaif:ArrayElementReference vertex_id="2">
             <xaif:IndexTriplet>
               <xaif:Index>
-                <xaif:Intrinsic vertex_id="1" name="iabs_scal" type="***" annotation="{IntrinsicKey#0_IABS}"/>
+                <xaif:Intrinsic vertex_id="1" name="iabs_scal" type="***" annotation="{IntrinsicKey#0_IABS}" rType="integer"/>
                 <xaif:Constant vertex_id="2" type="integer" feType="I4" value="1"/>
                 <xaif:ExpressionEdge edge_id="1" source="2" target="1" position="1"/>
               </xaif:Index>
@@ -337,7 +337,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="4" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
           </xaif:VariableReference>
@@ -491,7 +491,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="6" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_4"/>
           </xaif:VariableReference>
@@ -710,8 +710,8 @@
           <xaif:VariableReferenceEdge edge_id="1" source="1" target="2"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
-          <xaif:Intrinsic vertex_id="2" name="div_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rShape="vector"/>
+          <xaif:Intrinsic vertex_id="2" name="div_scal_scal" type="***" rShape="vector"/>
           <xaif:VariableReference vertex_id="3" du_ud="11" alias="10">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="A_1"/>
             <xaif:ArrayElementReference vertex_id="2">
@@ -732,7 +732,7 @@
           <xaif:Constant vertex_id="4" type="real" feType="F4" value="3.0999999046e+00"/>
           <xaif:ExpressionEdge edge_id="1" source="3" target="2" position="1"/>
           <xaif:ExpressionEdge edge_id="2" source="4" target="2" position="2"/>
-          <xaif:Intrinsic vertex_id="5" name="mul_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="5" name="mul_scal_scal" type="***" rShape="vector"/>
           <xaif:VariableReference vertex_id="6" du_ud="12" alias="11">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="B_2"/>
             <xaif:ArrayElementReference vertex_id="2">
@@ -750,7 +750,7 @@
             </xaif:ArrayElementReference>
             <xaif:VariableReferenceEdge edge_id="1" source="1" target="2"/>
           </xaif:VariableReference>
-          <xaif:Intrinsic vertex_id="7" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}"/>
+          <xaif:Intrinsic vertex_id="7" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}" rShape="vector"/>
           <xaif:VariableReference vertex_id="8" du_ud="13" alias="13">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="C_3"/>
           </xaif:VariableReference>

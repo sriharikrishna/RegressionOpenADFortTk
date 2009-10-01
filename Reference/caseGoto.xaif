@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Mon Aug 31 13:35:58 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 01:10:50 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -153,7 +153,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_2"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="2">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="I_2"/>
           </xaif:VariableReference>
@@ -242,7 +242,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="V_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="V_3"/>
           </xaif:VariableReference>
@@ -261,7 +261,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="V_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="mul_scal_scal" type="***"/>
+          <xaif:Intrinsic vertex_id="1" name="mul_scal_scal" type="***" rType="integer"/>
           <xaif:VariableReference vertex_id="2" du_ud="7" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="V_3"/>
           </xaif:VariableReference>
