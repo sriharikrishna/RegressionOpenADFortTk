@@ -1,1 +1,1 @@
-incorrect backtranslation of select - case construct
+incorrect backtranslation of select - case construct; see <a href="http://trac.mcs.anl.gov/projects/openAD/ticket/163">bug report</a>.
