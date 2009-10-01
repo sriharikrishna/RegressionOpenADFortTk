@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:34:40 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Sep 29 00:12:27 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -219,7 +219,7 @@
 
     <xaif:Branch vertex_id="23" lineNumber="38">
       <xaif:Condition>
-        <xaif:Intrinsic vertex_id="1" name="bogus_string_lt_scal_scal" type="***" rType="integer" rShape="scalar"/>
+        <xaif:Intrinsic vertex_id="1" name="bogus_string_lt_scal_scal" type="***" rType="integer"/>
         <xaif:VariableReference vertex_id="2" du_ud="2" alias="2">
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="A_1"/>
         </xaif:VariableReference>
@@ -250,7 +250,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -262,7 +262,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="sqrt_scal" type="***" annotation="{IntrinsicKey#0_SQRT}"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -274,7 +274,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}"/>
           <xaif:VariableReference vertex_id="2" du_ud="3" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -286,7 +286,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}"/>
           <xaif:VariableReference vertex_id="2" du_ud="4" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -298,7 +298,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="sin_scal" type="***" annotation="{IntrinsicKey#0_SIN}"/>
           <xaif:VariableReference vertex_id="2" du_ud="2" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
           </xaif:VariableReference>
@@ -310,7 +310,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}"/>
           <xaif:VariableReference vertex_id="2" du_ud="5" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -322,7 +322,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}"/>
           <xaif:VariableReference vertex_id="2" du_ud="6" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -334,7 +334,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="cos_scal" type="***" annotation="{IntrinsicKey#0_COS}"/>
           <xaif:VariableReference vertex_id="2" du_ud="7" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
           </xaif:VariableReference>
@@ -346,7 +346,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}"/>
           <xaif:VariableReference vertex_id="2" du_ud="8" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -358,7 +358,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}"/>
           <xaif:VariableReference vertex_id="2" du_ud="9" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -370,7 +370,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}"/>
           <xaif:VariableReference vertex_id="2" du_ud="10" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
           </xaif:VariableReference>
@@ -382,7 +382,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}"/>
           <xaif:VariableReference vertex_id="2" du_ud="11" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -394,7 +394,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}"/>
           <xaif:VariableReference vertex_id="2" du_ud="12" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -406,7 +406,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="ln_scal" type="***" annotation="{IntrinsicKey#0_LOG}"/>
           <xaif:VariableReference vertex_id="2" du_ud="13" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
           </xaif:VariableReference>
@@ -418,7 +418,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="14" alias="5">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="X_3"/>
           </xaif:VariableReference>
@@ -434,7 +434,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="15" alias="6">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="YY_4"/>
           </xaif:VariableReference>
@@ -450,7 +450,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***" rType="real" rShape="scalar"/>
+          <xaif:Intrinsic vertex_id="1" name="pow_scal_scal" type="***"/>
           <xaif:VariableReference vertex_id="2" du_ud="16" alias="4">
             <xaif:SymbolReference vertex_id="1" scope_id="3" symbol_id="ZZZ_5"/>
           </xaif:VariableReference>
