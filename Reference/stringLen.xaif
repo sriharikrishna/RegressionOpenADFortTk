@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Jul 29 16:57:20 2009 -->
+<!-- XAIF file translated from WHIRL at Fri Oct  2 09:26:12 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -102,9 +102,9 @@
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
           <xaif:Intrinsic vertex_id="1" name="add_scal_scal" type="***"/>
-          <xaif:Intrinsic vertex_id="2" name="mul_scal_scal" type="***"/>
-          <xaif:Intrinsic vertex_id="3" name="len" type="***" annotation="{IntrinsicKey#1_LEN_CALL}"/>
-          <xaif:Intrinsic vertex_id="4" name="trim" type="***"/>
+          <xaif:Intrinsic vertex_id="2" name="mul_scal_scal" type="***" rType="integer"/>
+          <xaif:Intrinsic vertex_id="3" name="len" type="***" annotation="{IntrinsicKey#1_LEN_CALL}" rType="integer"/>
+          <xaif:Intrinsic vertex_id="4" name="trim" type="***" rType="char"/>
           <xaif:VariableReference vertex_id="5" du_ud="3" alias="2">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="S_2"/>
           </xaif:VariableReference>

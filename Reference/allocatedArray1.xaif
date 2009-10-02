@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Aug 28 11:25:51 2009 -->
+<!-- XAIF file translated from WHIRL at Fri Oct  2 09:14:15 2009 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -96,8 +96,8 @@
 
     <xaif:Branch vertex_id="16" lineNumber="10">
       <xaif:Condition>
-        <xaif:Intrinsic vertex_id="1" name="allocated" type="***" rType="real" rShape="vector"/>
-        <xaif:VariableReference vertex_id="2" du_ud="0" alias="0">
+        <xaif:Intrinsic vertex_id="1" name="allocated" type="***" rType="integer"/>
+        <xaif:VariableReference vertex_id="2" du_ud="1" alias="2">
           <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="X_1"/>
         </xaif:VariableReference>
         <xaif:ExpressionEdge edge_id="1" source="2" target="1" position="1"/>
