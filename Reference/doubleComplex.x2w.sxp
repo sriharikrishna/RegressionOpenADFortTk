@@ -310,7 +310,7 @@
                 (CONST F8 V ((st "    0.000000000000000" 1 29)))
                 (LDID F8 F8 ((st "I1" 2 2) 0 (ty ".predef_F8" 11 8) 0)))
               (LDA U8 V ((st "DC" 2 1) 0 (ty "anon_ptr." 36 8) 0)))
-            (ISTORE V C8 (0 0 (ty "anon_ptr." 35 8))
+            (ISTORE V F8 (0 0 (ty "anon_ptr." 35 8))
               (CALL F8 V ((st "REAL" 1 30) (oflg 0x7e))
                 (PARM C8 V ((oflg 0x1) (ty ".predef_C8" 18 8))
                   (LDID C8 C8 ((st "DC" 2 1) 0 (ty ".predef_C8" 18 8) 0))))
