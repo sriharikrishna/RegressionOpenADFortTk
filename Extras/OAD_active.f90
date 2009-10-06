@@ -35,8 +35,8 @@ oad_allocateMatching
           ! initialization does not work for active variables
           ! inside of common block, such as in boxmodel
           ! initialization is required for correct adjoint
-          real(w2f__8) :: d=0.0
-          ! real(w2f__8) :: d
+          ! real(w2f__8) :: d=0.0
+          real(w2f__8) :: d
         end type active
         
         interface saxpy
