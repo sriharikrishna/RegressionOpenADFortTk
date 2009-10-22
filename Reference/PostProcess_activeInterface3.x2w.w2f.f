@@ -7,7 +7,7 @@
 C
 C     **** Top Level Pragmas ****
 C
-      interface 
+      interface
         SUBROUTINE foo(X, Y, Z, I)
         use w2f__types
       use OAD_active
@@ -15,10 +15,10 @@ C
         REAL(w2f__8) Y(1 : 1)
         REAL(w2f__8) Z(1 : 1)
         INTEGER(w2f__i4) I
-        INTENT(in)  I
+        INTENT(in) I
         END SUBROUTINE
 
-      end interface 
+      end interface
 
 C
 C     **** Statements ****
