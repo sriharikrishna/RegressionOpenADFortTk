@@ -5,7 +5,7 @@ subroutine foo(a)
   a=CBvar
 end subroutine
 
-program cb1
+program ProgramCB
   COMMON/CB/ CBvar
   double precision :: CBvar
   double precision :: x,y
