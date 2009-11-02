@@ -33,18 +33,13 @@ C
       REAL(w2f__8) D
       type(active) :: CBV
       type(active) :: F
-      EQUIVALENCE(tmp0(1), D)
-      EQUIVALENCE(tmp0(9), F)
+      EQUIVALENCE(CBV, F)
 C
 C     **** Local Variables and Functions ****
 C
       EXTERNAL foo
       type(active) :: X
       type(active) :: Y
-C
-C     **** Temporary Variables ****
-C
-      INTEGER(w2f__i1) tmp0(1 : 16)
 C
 C     **** Top Level Pragmas ****
 C
