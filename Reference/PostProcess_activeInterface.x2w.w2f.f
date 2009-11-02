@@ -27,14 +27,14 @@ C     **** Top Level Pragmas ****
 C
 C$OPENAD INDEPENDENT(X)
 C$OPENAD DEPENDENT(Y)
-      interface 
+      interface
         SUBROUTINE foo(X)
         use w2f__types
       use OAD_active
         type(active) :: X
         END SUBROUTINE
 
-      end interface 
+      end interface
 
 C
 C     **** Statements ****
