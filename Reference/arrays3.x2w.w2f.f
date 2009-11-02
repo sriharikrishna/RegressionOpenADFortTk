@@ -6,17 +6,13 @@ C
 C     **** Local Variables and Functions ****
 C
       
-      EQUIVALENCE(tmp0(1), t__3)
-      EQUIVALENCE(tmp0(1), X)
+      EQUIVALENCE(X, t__3)
+      
       INTEGER(w2f__i4) t__3(1 : 6)
       SAVE t__3
       INTEGER(w2f__i4) X(1 : 2, 1 : 3)
       SAVE X
       INTEGER(w2f__i4) Y(1 : 2)
-C
-C     **** Temporary Variables ****
-C
-      INTEGER(w2f__i1) tmp0(1 : 24)
 C
 C     **** Initializers ****
 C

@@ -6,8 +6,8 @@ C
 C     **** Local Variables and Functions ****
 C
       
-      EQUIVALENCE(tmp0(1), t__1)
-      EQUIVALENCE(tmp0(1), X)
+      EQUIVALENCE(X, t__1)
+      
       REAL(w2f__8) t__1(1 : 4)
       SAVE t__1
       REAL(w2f__8) X(1 : 2, 1 : 2)
@@ -16,12 +16,11 @@ C
 C
 C     **** Temporary Variables ****
 C
-      INTEGER(w2f__i1) tmp0(1 : 32)
-      INTEGER(w2f__i8) tmp1
+      INTEGER(w2f__i8) tmp0
 C
 C     **** Initializers ****
 C
-      DATA(t__1(tmp1), tmp1 = 1, 4, 1) / 1.0D00, 2.0D00, 3.0D00, 4.0D00
+      DATA(t__1(tmp0), tmp0 = 1, 4, 1) / 1.0D00, 2.0D00, 3.0D00, 4.0D00
      >  /
 C
 C     **** Statements ****
