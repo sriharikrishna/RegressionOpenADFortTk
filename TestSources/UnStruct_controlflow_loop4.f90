@@ -24,6 +24,7 @@ program controlflow_loop4
         
         x = x + i
         IF (7 < x .AND. x < 8) CYCLE
+        print *, i, iter
         call compute(x)
         
         IF (3 < x .AND. x < 4) EXIT infinite
