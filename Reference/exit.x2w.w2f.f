@@ -10,43 +10,45 @@ C
 C
 C     **** Statements ****
 C
-1     CONTINUE
-      GO TO 2
 2     CONTINUE
-      I = 1
-      J = 0
       GO TO 3
 3     CONTINUE
       I = 1
-      GO TO 13
+      J = 0
+      GO TO 4
 4     CONTINUE
-      I = I + 1
-13    CONTINUE
-      IF(I .LE. 4) THEN
-        GO TO 5
-      ELSE
-        GO TO 11
-      ENDIF
+      I = 1
+      GO TO 14
 5     CONTINUE
-      IF(I .LT. 3) THEN
-        GO TO 10
-      ELSE
+      I = I + 1
+14    CONTINUE
+      IF(I .LE. 4) THEN
         GO TO 6
+      ELSE
+        GO TO 12
       ENDIF
 6     CONTINUE
-      GO TO 7
+      IF(I .LT. 3) THEN
+        GO TO 11
+      ELSE
+        GO TO 7
+      ENDIF
 7     CONTINUE
       GO TO 8
 8     CONTINUE
-      J = (J + 1)
       GO TO 9
 9     CONTINUE
-      GO TO 4
+      J = (J + 1)
+      GO TO 10
 10    CONTINUE
-      GO TO 11
+      GO TO 5
 11    CONTINUE
-      WRITE(*, *) J
-      
       GO TO 12
 12    CONTINUE
+      WRITE(*, *) J
+      
+      GO TO 13
+13    CONTINUE
+      GO TO 1
+1     CONTINUE
       END PROGRAM

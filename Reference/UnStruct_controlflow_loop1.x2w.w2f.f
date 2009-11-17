@@ -9,39 +9,41 @@ C
 C
 C     **** Statements ****
 C
-1     CONTINUE
-      GO TO 2
 2     CONTINUE
       GO TO 3
 3     CONTINUE
-      IF(X .GT. 0.0D00) THEN
-        GO TO 5
-      ELSE
-        GO TO 4
-      ENDIF
+      GO TO 4
 4     CONTINUE
-      GO TO 12
-5     CONTINUE
-      X = (X +(-3.00000011920928955078D-01))
-      GO TO 6
-6     CONTINUE
-      IF(X .LT. 0.0D00) THEN
-        GO TO 11
+      IF(X .GT. 0.0D00) THEN
+        GO TO 6
       ELSE
-        GO TO 7
+        GO TO 5
       ENDIF
+5     CONTINUE
+      GO TO 13
+6     CONTINUE
+      X = (X +(-3.00000011920928955078D-01))
+      GO TO 7
 7     CONTINUE
-      GO TO 8
+      IF(X .LT. 0.0D00) THEN
+        GO TO 12
+      ELSE
+        GO TO 8
+      ENDIF
 8     CONTINUE
       GO TO 9
 9     CONTINUE
       GO TO 10
 10    CONTINUE
-      GO TO 3
+      GO TO 11
 11    CONTINUE
-      RETURN
-      GO TO 12
+      GO TO 4
 12    CONTINUE
+      GO TO 1
+      GO TO 13
+13    CONTINUE
+      GO TO 1
+1     CONTINUE
       END SUBROUTINE
 
       PROGRAM controlflow

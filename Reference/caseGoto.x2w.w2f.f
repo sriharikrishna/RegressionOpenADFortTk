@@ -40,35 +40,37 @@ C
 C
 C     **** Statements ****
 C
-1     CONTINUE
-      GO TO 2
 2     CONTINUE
       GO TO 3
 3     CONTINUE
+      GO TO 4
+4     CONTINUE
       CALL getlabel(I)
       WRITE(*, *) I
       select_expr_temp_0 = I
-      GO TO 4
-4     CONTINUE
-      IF ( select_expr_temp_0  .EQ.  2)  GO TO  8
-      IF ( select_expr_temp_0  .EQ.  3)  GO TO  7
-      IF ( select_expr_temp_0  .EQ.  4)  GO TO  6
       GO TO 5
 5     CONTINUE
-      STOP 'problem'
-      GO TO 10
+      IF ( select_expr_temp_0  .EQ.  2)  GO TO  9
+      IF ( select_expr_temp_0  .EQ.  3)  GO TO  8
+      IF ( select_expr_temp_0  .EQ.  4)  GO TO  7
+      GO TO 6
 6     CONTINUE
-      V = (V * 2)
-      GO TO 3
+      STOP 'problem'
+      GO TO 11
 7     CONTINUE
-      V = (V +(-1))
-      GO TO 3
+      V = (V * 2)
+      GO TO 4
 8     CONTINUE
-      GO TO 9
+      V = (V +(-1))
+      GO TO 4
 9     CONTINUE
+      GO TO 10
+10    CONTINUE
 C     2 print *,v
       WRITE(*, *) V
       
-      GO TO 10
-10    CONTINUE
+      GO TO 11
+11    CONTINUE
+      GO TO 1
+1     CONTINUE
       END PROGRAM

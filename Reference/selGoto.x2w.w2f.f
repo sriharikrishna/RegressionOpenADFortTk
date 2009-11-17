@@ -11,47 +11,49 @@ C
 C
 C     **** Statements ****
 C
-1     CONTINUE
-      GO TO 2
 2     CONTINUE
-      I = 1
-      J = 0
       GO TO 3
 3     CONTINUE
-      IF(I .LT. 3) THEN
-        GO TO 12
-      ELSE
-        GO TO 4
-      ENDIF
+      I = 1
+      J = 0
+      GO TO 4
 4     CONTINUE
-      GO TO 5
+      IF(I .LT. 3) THEN
+        GO TO 13
+      ELSE
+        GO TO 5
+      ENDIF
 5     CONTINUE
       GO TO 6
 6     CONTINUE
-      select_expr_temp_0 = I
       GO TO 7
 7     CONTINUE
-      IF(select_expr_temp_0 .ne. 0) THEN
-        GO TO 9
-      ELSE
-        GO TO 8
-      ENDIF
+      select_expr_temp_0 = I
+      GO TO 8
 8     CONTINUE
-      J = 1
-      GO TO 10
+      IF(select_expr_temp_0 .ne. 0) THEN
+        GO TO 10
+      ELSE
+        GO TO 9
+      ENDIF
 9     CONTINUE
-      J = 2
-      GO TO 10
+      J = 1
+      GO TO 11
 10    CONTINUE
+      J = 2
       GO TO 11
 11    CONTINUE
-      GO TO 13
+      GO TO 12
 12    CONTINUE
-      GO TO 13
+      GO TO 14
 13    CONTINUE
+      GO TO 14
+14    CONTINUE
 C     1 print *,j
       WRITE(*, *) J
       
-      GO TO 14
-14    CONTINUE
+      GO TO 15
+15    CONTINUE
+      GO TO 1
+1     CONTINUE
       END PROGRAM
