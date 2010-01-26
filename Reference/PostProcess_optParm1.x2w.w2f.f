@@ -20,15 +20,15 @@ C
 C     **** Statements ****
 C
       C = A
-      t__1 = .true.
-      IF (.not. PRESENT(B)) THEN
-        t__1 = .false.
+      t__1 = .TRUE.
+      IF(.NOT. PRESENT(B)) THEN
+        t__1 = .FALSE.
       ELSE
-        IF (.not. PRESENT(D)) THEN
-          t__1 = .false.
+        IF(.NOT. PRESENT(D)) THEN
+          t__1 = .FALSE.
         ENDIF
       ENDIF
-      IF (t__1) THEN
+      IF(t__1) THEN
         D = B
       ENDIF
       END SUBROUTINE

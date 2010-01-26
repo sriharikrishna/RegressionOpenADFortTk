@@ -42,7 +42,8 @@ C       **** Statements ****
 C
         X = 1.0
         Y = 1.0
-        IF (((NC*NT).eq.240).AND.((DBLE(X)*DBLE(Y)).eq.DBLE(1.0))) THEN
+        IF(((NC * NT) .eq. 240) .AND.((DBLE(X) * DBLE(Y)) .eq. DBLE(1.0 
+     +))) THEN
           WRITE(*,*) 'OK'
         ELSE
           WRITE(*,*) (NC*NT),(X*Y)
