@@ -1,7 +1,7 @@
 
       PROGRAM print1
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****

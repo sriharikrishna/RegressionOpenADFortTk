@@ -1,7 +1,7 @@
 
       SUBROUTINE foo(A, B, C, D)
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Parameters and Result ****
@@ -34,8 +34,8 @@ C
       END SUBROUTINE
 
       PROGRAM optparm1
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
@@ -51,8 +51,8 @@ C$OPENAD INDEPENDENT(X)
 C$OPENAD DEPENDENT(Y)
       interface
         SUBROUTINE foo(A, B, C, D)
+        use OAD_active
         use w2f__types
-      use OAD_active
         REAL(w2f__8) A
         REAL(w2f__8) B
         OPTIONAL B

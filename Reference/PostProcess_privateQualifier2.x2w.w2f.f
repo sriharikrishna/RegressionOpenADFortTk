@@ -1,7 +1,7 @@
 
       MODULE m
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
       SAVE
 C
@@ -35,7 +35,6 @@ C
 
         SUBROUTINE FOO_I
         use w2f__types
-        use OAD_active
         IMPLICIT NONE
 C
 C       **** Statements ****
@@ -52,8 +51,8 @@ C
       END
 
       PROGRAM privateq
-      use w2f__types
       use OAD_active
+      use w2f__types
       use m
       IMPLICIT NONE
 C

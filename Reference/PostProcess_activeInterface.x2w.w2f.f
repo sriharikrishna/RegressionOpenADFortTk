@@ -1,7 +1,7 @@
 
       SUBROUTINE foo(X)
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Parameters and Result ****
@@ -14,8 +14,8 @@ C
       END SUBROUTINE
 
       PROGRAM activeinterface
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Local Variables and Functions ****
@@ -29,8 +29,8 @@ C$OPENAD INDEPENDENT(X)
 C$OPENAD DEPENDENT(Y)
       interface
         SUBROUTINE foo(X)
+        use OAD_active
         use w2f__types
-      use OAD_active
         type(active) :: X
         END SUBROUTINE
 

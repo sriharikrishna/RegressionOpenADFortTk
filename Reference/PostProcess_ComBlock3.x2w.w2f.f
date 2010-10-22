@@ -1,7 +1,7 @@
 
       SUBROUTINE foo(A)
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Global Variables & Derived Type Definitions ****
@@ -22,8 +22,8 @@ C
       END SUBROUTINE
 
       PROGRAM p
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Global Variables & Derived Type Definitions ****

@@ -1,7 +1,7 @@
 
       MODULE moda
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
       SAVE
 C
@@ -9,8 +9,8 @@ C     **** Top Level Pragmas ****
 C
       interface
         SUBROUTINE foo(X, Y, Z, I)
+        use OAD_active
         use w2f__types
-      use OAD_active
         type(active) :: X(1:1)
         REAL(w2f__8) Y(1 : 1)
         REAL(w2f__8) Z(1 : 1)
@@ -26,8 +26,8 @@ C
       END MODULE
 
       SUBROUTINE foo(A, B, C, I)
-      use w2f__types
       use OAD_active
+      use w2f__types
       IMPLICIT NONE
 C
 C     **** Parameters and Result ****
@@ -43,8 +43,8 @@ C
       END SUBROUTINE
 
       PROGRAM activeinterface2
-      use w2f__types
       use OAD_active
+      use w2f__types
       use moda
       IMPLICIT NONE
 C
