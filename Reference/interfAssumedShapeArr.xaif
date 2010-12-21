@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Sep 18 01:16:39 2009 -->
+<!-- XAIF file translated from WHIRL at Tue Dec 21 10:21:34 2010 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -37,7 +37,6 @@
     <xaif:Scope vertex_id="2" annotation="{SymTab_Id#2}">
       <xaif:SymbolTable>
         <xaif:Symbol symbol_id="I_1" kind="variable" type="integer" feType="I4" shape="vector" annotation="{Sym_Id#1}" active="0">
-          <xaif:DimensionBounds lower="1" upper="1"/>
         </xaif:Symbol>
         <xaif:Symbol symbol_id="unnamed interface_2" kind="variable" type="opaque" feType="UNK" shape="scalar" annotation="{Sym_Id#2}" active="0">
         </xaif:Symbol>
@@ -49,7 +48,6 @@
     <xaif:Scope vertex_id="3" annotation="{SymTab_Id#3}">
       <xaif:SymbolTable>
         <xaif:Symbol symbol_id="I_1" kind="variable" type="integer" feType="I4" shape="vector" annotation="{Sym_Id#1}" active="0">
-          <xaif:DimensionBounds lower="1" upper="1"/>
         </xaif:Symbol>
       </xaif:SymbolTable>
     </xaif:Scope>
