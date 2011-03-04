@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Tue Sep 29 00:11:46 2009 -->
+<!-- XAIF file translated from WHIRL at Fri Mar  4 09:43:38 2011 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -127,7 +127,7 @@
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
           <xaif:Intrinsic vertex_id="1" name="exp_scal" type="***" annotation="{IntrinsicKey#0_EXP}" rShape="matrix"/>
-          <xaif:VariableReference vertex_id="2" du_ud="1" alias="2">
+          <xaif:VariableReference vertex_id="2" du_ud="2" alias="3">
             <xaif:SymbolReference vertex_id="1" scope_id="2" symbol_id="X_3"/>
             <xaif:ArrayElementReference vertex_id="2">
               <xaif:IndexTriplet>
