@@ -29,7 +29,7 @@ contains
 end module coordrec
 
 
-function distanceFromOrigin(c) result(r)
+subroutine distanceFromOrigin(c,r)
   use coordrec
   
   type(cart), intent(in) :: c
@@ -37,7 +37,7 @@ function distanceFromOrigin(c) result(r)
   ! r^2 = x^2 + y^2
   r = sqrt((c%x)**2 + (c%y)**2)
 
-end function distanceFromOrigin
+end 
 
 
 program dosomething
@@ -47,10 +47,10 @@ program dosomething
   integer :: n = 7
   real :: d
   
-  c1 = cart(n, n)
-  c2 = cart(4.0, 4.0)
+  c2 = cart(n, n)
   c1 = c2
   
-  d = distanceFromOrigin(c)
+  call distanceFromOrigin(c,d)
+  print *,d
   
 end program dosomething
