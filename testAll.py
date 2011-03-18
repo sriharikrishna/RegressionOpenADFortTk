@@ -387,6 +387,8 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
 
     # fortran -> whirl -> xaif -> whirl
     cmd=xaif2whirl + " -t OpenADTy_active "
+    if globalVerbose :
+       cmd=cmd+" --debug 1 "
     if globalValidate:
         # first link the schema files
         for aSchemaFile in ['xaif','xaif_base','xaif_inlinable_intrinsics','xaif_derivative_propagator','xaif_output']:
