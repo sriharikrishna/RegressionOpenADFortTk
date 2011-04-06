@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Sat Mar  5 09:41:10 2011 -->
+<!-- XAIF file translated from WHIRL at Wed Apr  6 17:08:37 2011 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -50,6 +50,7 @@
         </xaif:Symbol>
         <xaif:Symbol symbol_id="oaScalRef2" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#28}" active="0"/>
         <xaif:Symbol symbol_id="oaScalRef3" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#38}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef4" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#56}" active="0"/>
         <xaif:Symbol symbol_id="oaScalRef0" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#16}" active="0"/>
         <xaif:Symbol symbol_id="oaScalRef1" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#24}" active="0"/>
       </xaif:SymbolTable>
@@ -69,8 +70,9 @@
         <xaif:Symbol symbol_id="_END_5" kind="subroutine" type="void" annotation="{Sym_Id#5}"/>
         <xaif:Symbol symbol_id="t__1_6" kind="variable" type="opaque" feType="M" shape="scalar" annotation="{Sym_Id#6}" active="0">
         </xaif:Symbol>
-        <xaif:Symbol symbol_id="oaScalRef4" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#9}" active="0"/>
-        <xaif:Symbol symbol_id="oaScalRef5" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#13}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef5" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#9}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef7" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#18}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef6" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#13}" active="0"/>
       </xaif:SymbolTable>
     </xaif:Scope>
 
@@ -281,7 +283,7 @@
       <xaif:Marker statement_id="6" annotation="{WHIRL_Id#6} [passive: OPR_USE]"/>
       <xaif:Assignment statement_id="7" lineNumber="54" do_chain="1">
         <xaif:AssignmentLHS du_ud="6" alias="4">
-          <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="oaScalRef4"/>
+          <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="oaScalRef5"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
           <xaif:VariableReference vertex_id="1" du_ud="2" alias="5">
@@ -291,7 +293,7 @@
       </xaif:Assignment>
       <xaif:Assignment statement_id="11" lineNumber="54" do_chain="1">
         <xaif:AssignmentLHS du_ud="6" alias="4">
-          <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="oaScalRef5"/>
+          <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="oaScalRef6"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
           <xaif:Constant vertex_id="1" type="integer" feType="I4" value="9"/>
