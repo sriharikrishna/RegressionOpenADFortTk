@@ -8,7 +8,7 @@ C
 C     **** Global Variables & Derived Type Definitions ****
 C
       TYPE T
-        REAL(w2f__4) X
+        type(active) :: X
         type(active),POINTER :: Y(:)
       END TYPE
 
@@ -36,7 +36,7 @@ C
 C     **** Statements ****
 C
       ALLOCATE(AT(1))
-      AT(1)%X = X
+      AT(1)%X%v = X
       ALLOCATE(AT(1)%Y(1))
       AT(1)%Y(:)%v = 0.0
       Y = AT(1)%Y(1)%v

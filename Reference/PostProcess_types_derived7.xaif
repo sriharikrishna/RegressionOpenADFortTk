@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Tue Apr 19 16:20:10 2011 -->
+<!-- XAIF file translated from WHIRL at Tue Apr 19 17:26:18 2011 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -51,9 +51,9 @@
         <xaif:Symbol symbol_id="AT_3" kind="variable" type="opaque" feType="M" shape="vector" annotation="{Sym_Id#3}" active="0">
         </xaif:Symbol>
         <xaif:Symbol symbol_id="_ALLOCATE_4" kind="subroutine" type="void" annotation="{Sym_Id#4}"/>
-        <xaif:Symbol symbol_id="oaScalRef0" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#19}" active="0"/>
-        <xaif:Symbol symbol_id="oaScalRef1" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#27}" active="1"/>
-        <xaif:Symbol symbol_id="oaScalRef2" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#54}" active="1"/>
+        <xaif:Symbol symbol_id="oaScalRef0" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#19}" active="1"/>
+        <xaif:Symbol symbol_id="oaScalRef1" kind="variable" type="real" shape="vector" annotation="{WHIRL_Id#27}" active="1"/>
+        <xaif:Symbol symbol_id="oaScalRef2" kind="variable" type="real" shape="vector" annotation="{WHIRL_Id#54}" active="1"/>
       </xaif:SymbolTable>
     </xaif:Scope>
 

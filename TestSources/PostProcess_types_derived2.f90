@@ -7,14 +7,14 @@
 module coord2d
 
   type cart
-     real :: x
-     real :: y
+     double precision :: x
+     double precision :: y
      character(len=20) :: msg
   end type cart
 
   type polar
-     real :: r
-     real :: theta ! radians
+     double precision :: r
+     double precision :: theta ! radians
      character(len=20) :: msg
   end type polar
 
@@ -55,7 +55,7 @@ program dosomething
 
   call cart2polar(c, p)
   
-  write(*,*) 'cart c =', c
-  write(*,*) 'polar p =', p
+  write(*,'(A,2(F,A),2A)') 'cart c = (', c%x,',',c%y,',',c%msg,')'
+  print *, 'polar p = (', p%r,',',p%theta,',',p%msg,')'
   
 end program dosomething

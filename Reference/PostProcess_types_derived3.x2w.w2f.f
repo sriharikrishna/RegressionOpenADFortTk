@@ -1,24 +1,25 @@
 
       MODULE coordrec
+      use OAD_active
       use w2f__types
       IMPLICIT NONE
       SAVE
 C
 C     **** Global Variables & Derived Type Definitions ****
 C
-      TYPE  CART
-        REAL(w2f__4) X
-        REAL(w2f__4) Y
+      TYPE CART
+        type(active) :: X
+        type(active) :: Y
       END TYPE
-      
+
 C
 C     **** Top Level Pragmas ****
 C
-      interface  assignment (=)
-        module procedure  CART_ASSIGN_CART
+      interface assignment (=)
+        module procedure CART_ASSIGN_CART
 
-      end interface 
-      
+      end interface
+
 C
 C     **** Statements ****
 C
@@ -30,35 +31,37 @@ C
 C
 C       **** Parameters and Result ****
 C
-        TYPE (CART) A
-        INTENT(OUT)  A
-        TYPE (CART) B
-        INTENT(IN)  B
+        type(CART) :: A
+        INTENT(OUT) A
+        type(CART) :: B
+        INTENT(IN) B
 C
 C       **** Statements ****
 C
-        A%X = B%X
-        A%Y = B%Y
+        A%X%v = B%X%v
+        A%Y%v = B%Y%v
         END SUBROUTINE
       END
 
       SUBROUTINE distancefromorigin(C, R)
+      use OAD_active
       use w2f__types
       use coordrec
       IMPLICIT NONE
 C
 C     **** Parameters and Result ****
 C
-      TYPE (CART) C
-      INTENT(IN)  C
+      type(CART) :: C
+      INTENT(IN) C
       REAL(w2f__4) R
 C
 C     **** Statements ****
 C
-      R = SQRT((C%X ** 2) +(C%Y ** 2))
+      R = SQRT((DBLE(C%X%v)**2)+(DBLE(C%Y%v)**2))
       END SUBROUTINE
 
       PROGRAM dosomething
+      use OAD_active
       use w2f__types
       use coordrec
       IMPLICIT NONE
@@ -66,13 +69,13 @@ C
 C     **** Local Variables and Functions ****
 C
       REAL(w2f__4) C
-      TYPE (CART) C1
-      TYPE (CART) C2
+      type(CART) :: C1
+      type(CART) :: C2
       REAL(w2f__4) D
       EXTERNAL distancefromorigin
       INTEGER(w2f__i4) N
       SAVE N
-      TYPE (CART) t__1
+      type(CART) :: t__1
 C
 C     **** Initializers ****
 C
@@ -80,11 +83,11 @@ C
 C
 C     **** Statements ****
 C
-      t__1%X = N
-      t__1%Y = N
-      CALL CART_ASSIGN_CART(C2, t__1)
-      CALL CART_ASSIGN_CART(C1, C2)
-      CALL distancefromorigin(C, D)
-      WRITE(*, *) D
+      t__1%X%v = N
+      t__1%Y%v = N
+      CALL CART_ASSIGN_CART(C2,t__1)
+      CALL CART_ASSIGN_CART(C1,C2)
+      CALL distancefromorigin(C,D)
+      WRITE(*,*) D
       
       END PROGRAM

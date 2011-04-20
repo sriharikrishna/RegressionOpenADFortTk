@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Fri Mar  4 16:52:38 2011 -->
+<!-- XAIF file translated from WHIRL at Wed Apr 20 09:30:43 2011 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -48,8 +48,8 @@
         </xaif:Symbol>
         <xaif:Symbol symbol_id="R_2" kind="variable" type="real" feType="F4" shape="scalar" annotation="{Sym_Id#2}" active="0">
         </xaif:Symbol>
-        <xaif:Symbol symbol_id="oaScalRef1" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#25}" active="0"/>
-        <xaif:Symbol symbol_id="oaScalRef0" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#17}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef1" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#25}" active="1"/>
+        <xaif:Symbol symbol_id="oaScalRef0" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#17}" active="1"/>
       </xaif:SymbolTable>
     </xaif:Scope>
 
@@ -67,8 +67,8 @@
         <xaif:Symbol symbol_id="_END_5" kind="subroutine" type="void" annotation="{Sym_Id#5}"/>
         <xaif:Symbol symbol_id="t__1_6" kind="variable" type="opaque" feType="M" shape="scalar" annotation="{Sym_Id#6}" active="0">
         </xaif:Symbol>
-        <xaif:Symbol symbol_id="oaScalRef2" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#9}" active="0"/>
-        <xaif:Symbol symbol_id="oaScalRef3" kind="variable" type="opaque" shape="scalar" annotation="{WHIRL_Id#13}" active="0"/>
+        <xaif:Symbol symbol_id="oaScalRef2" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#9}" active="1"/>
+        <xaif:Symbol symbol_id="oaScalRef3" kind="variable" type="real" shape="scalar" annotation="{WHIRL_Id#13}" active="1"/>
       </xaif:SymbolTable>
     </xaif:Scope>
 
