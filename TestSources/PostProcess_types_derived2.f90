@@ -49,9 +49,9 @@ program dosomething
 
   type(cart) :: c
   type(polar) :: p
-  integer :: n
+  double precision :: cx=0D0
   
-  c = cart(n, 9, 'why?')
+  c = cart(cx, 9D0, 'why?')
 
   call cart2polar(c, p)
   

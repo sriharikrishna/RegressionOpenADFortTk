@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ******************************************************************** -->
-<!-- XAIF file translated from WHIRL at Wed Apr 20 14:48:20 2011 -->
+<!-- XAIF file translated from WHIRL at Wed Jun 29 19:34:05 2011 -->
 <!-- ******************************************************************** -->
 
 <xaif:CallGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xaif="http://www.mcs.anl.gov/XAIF" xsi:schemaLocation="http://www.mcs.anl.gov/XAIF xaif.xsd" program_name="***myprog***" prefix="OpenAD_">
@@ -63,7 +63,7 @@
         <xaif:Symbol symbol_id="C_1" kind="variable" type="opaque" feType="M" shape="scalar" annotation="{Sym_Id#1}" active="0">
         </xaif:Symbol>
         <xaif:Symbol symbol_id="cart2polar__2" kind="subroutine" type="void" annotation="{Sym_Id#2}"/>
-        <xaif:Symbol symbol_id="N_3" kind="variable" type="integer" feType="I4" shape="scalar" annotation="{Sym_Id#3}" active="0">
+        <xaif:Symbol symbol_id="CX_3" kind="variable" type="real" feType="F8" shape="scalar" annotation="{Sym_Id#3}" active="0">
         </xaif:Symbol>
         <xaif:Symbol symbol_id="P_4" kind="variable" type="opaque" feType="M" shape="scalar" annotation="{Sym_Id#4}" active="0">
         </xaif:Symbol>
@@ -293,7 +293,7 @@
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
           <xaif:VariableReference vertex_id="1" du_ud="2" alias="5">
-            <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="N_3"/>
+            <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="CX_3"/>
           </xaif:VariableReference>
         </xaif:AssignmentRHS>
       </xaif:Assignment>
@@ -302,7 +302,7 @@
           <xaif:SymbolReference vertex_id="1" scope_id="4" symbol_id="oaScalRef6"/>
         </xaif:AssignmentLHS>
         <xaif:AssignmentRHS>
-          <xaif:Constant vertex_id="1" type="integer" feType="I4" value="9"/>
+          <xaif:Constant vertex_id="1" type="real" feType="F8" value="9.00000000000000000000e+00"/>
         </xaif:AssignmentRHS>
       </xaif:Assignment>
       <xaif:Marker statement_id="15" annotation="{WHIRL_Id#15} [cassignstmt]"/>

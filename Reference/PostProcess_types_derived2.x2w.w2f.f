@@ -58,14 +58,19 @@ C     **** Local Variables and Functions ****
 C
       type(CART) :: C
       EXTERNAL cart2polar
-      INTEGER(w2f__i4) N
+      REAL(w2f__8) CX
+      SAVE CX
       type(POLAR) :: P
       type(CART) :: t__1
 C
+C     **** Initializers ****
+C
+      DATA CX / 0.0D00 /
+C
 C     **** Statements ****
 C
-      t__1%X%v = N
-      t__1%Y%v = 9
+      t__1%X%v = CX
+      t__1%Y%v = 9.0D00
       t__1%MSG = 'why?'
       C = t__1
       CALL cart2polar(C,P)
