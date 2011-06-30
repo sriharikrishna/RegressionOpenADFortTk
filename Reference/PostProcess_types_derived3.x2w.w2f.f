@@ -68,18 +68,17 @@ C
 C
 C     **** Local Variables and Functions ****
 C
-      REAL(w2f__4) C
       type(CART) :: C1
       type(CART) :: C2
       REAL(w2f__4) D
       EXTERNAL distancefromorigin
-      INTEGER(w2f__i4) N
+      REAL(w2f__4) N
       SAVE N
       type(CART) :: t__1
 C
 C     **** Initializers ****
 C
-      DATA N / 7 /
+      DATA N / 7.0 /
 C
 C     **** Statements ****
 C
@@ -87,7 +86,7 @@ C
       t__1%Y%v = N
       CALL CART_ASSIGN_CART(C2,t__1)
       CALL CART_ASSIGN_CART(C1,C2)
-      CALL distancefromorigin(C,D)
+      CALL distancefromorigin(C1,D)
       WRITE(*,*) D
       
       END PROGRAM
