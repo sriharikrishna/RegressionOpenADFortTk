@@ -419,7 +419,7 @@ def runTest(exName,exNum,totalNum,compiler,optimizeFlag):
     if (os.system(cmd)):
 	raise MakeError, "Error while executing \"" + cmd + "\""
     if (basename[0:len(postProcessPrefix)]==postProcessPrefix) :
-        cmd=postProcess+" --abstractType OpenADTy_active -o "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
+        cmd=postProcess+" --abstractType OpenADTy_active --infoUnitFile Extras/w2f__types.f90 -o "+basename+".x2w.w2f.post.f "+basename+".x2w.w2f.f"
         if globalVerbose :
             print cmd
         if (os.system(cmd)):
